@@ -156,6 +156,8 @@ function ShowMessage(Feedback){
 	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
 	
 //
+//	RefreshImages();
+//
 }
 
 function ShowElements(Show, TagName, ContainerToReverse){
@@ -352,9 +354,29 @@ function Shuffle(InArray){
 function WriteToInstructions(Feedback) {
 	document.getElementById('InstructionsDiv').innerHTML = Feedback;
 
+	RefreshImages();
+
 }
 
 
+
+Imgs = new Array();
+
+function PreloadImages(){
+	var a = PreloadImages.arguments;
+	for (var i=0; i<a.length; i++){
+		Imgs[i] = new Image();
+		Imgs[i].src = a[i];
+	}
+}
+
+function RefreshImages(){
+	for (var i=0; i<document.images.length; i++){
+		if (document.images[i].name.substring(0,6) != 'NavBar'){
+			document.images[i].src = document.images[i].src;
+		}
+	}
+}
 
 
 function EscapeDoubleQuotes(InString){
@@ -560,6 +582,8 @@ function StartUp(){
 
 
 
+
+	PreloadImages('img1b.png');
 
 
 	var i = 0;
@@ -866,29 +890,15 @@ function TypeChars(Chars){
 <div class="Titles">
 	<h2 class="ExerciseTitle">Part 1</h2>
 
-	<h3 class="ExerciseSubtitle">Gap-fill exercise</h3>
+	<h3 class="ExerciseSubtitle">    </h3>
 
 
 
 </div>
 
 <div id="InstructionsDiv" class="StdDiv">
-	<div id="Instructions"> Look and read. Choose the correct words and write them on the lines. There is one example. </div>
+	<div id="Instructions">       </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -908,17 +918,11 @@ function TypeChars(Chars){
  
 <div id="ClozeDiv">
 <form id="Cloze" method="post" action="" onsubmit="return false;">
-
-</div>
-      <img src="img1.png" height="40%" width="40%">
-</div>
-
 <div class="ClozeBody">
-<br /><br />Example<br /><br />The people in this sometimes sing or play guitars. a band<br /><br />Questions<br /><br />1. This person helps people who aren't well in hospital. <span class="GapSpan" id="GapSpan0"><input type="text" id="Gap0" onfocus="TrackFocus(0)" onblur="LeaveGap()" class="GapBox" size="7"></input></span> <br /><br />2. Some people put milk or lemon in this drink. <span class="GapSpan" id="GapSpan1"><input type="text" id="Gap1" onfocus="TrackFocus(1)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> <br /><br />3. There are lots of cars, buses and people in this busy place. <span class="GapSpan" id="GapSpan2"><input type="text" id="Gap2" onfocus="TrackFocus(2)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> <br /><br />4. You can put cheese or meat between bread to make this. <span class="GapSpan" id="GapSpan3"><input type="text" id="Gap3" onfocus="TrackFocus(3)" onblur="LeaveGap()" class="GapBox" size="10"></input></span> <br /><br />5. This is part of a farm where you often see vegetable plants <span class="GapSpan" id="GapSpan4"><input type="text" id="Gap4" onfocus="TrackFocus(4)" onblur="LeaveGap()" class="GapBox" size="7"></input></span> 
+Look and read. Choose the correct words and write them on the lines. There is one example.<br /><br /><br /><img src="img1b.png" alt="img1b.png" title="img1b" width="40%" height="40%"></img><br /><br /><br />Questions<br /><br />1. This person helps people who aren't well in hospital. <span class="GapSpan" id="GapSpan0"><input type="text" id="Gap0" onfocus="TrackFocus(0)" onblur="LeaveGap()" class="GapBox" size="7"></input></span> <br /><br />2. Some people put milk or lemon in this drink. <span class="GapSpan" id="GapSpan1"><input type="text" id="Gap1" onfocus="TrackFocus(1)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> <br /><br />3. There are lots of cars, buses and people in this busy place. <span class="GapSpan" id="GapSpan2"><input type="text" id="Gap2" onfocus="TrackFocus(2)" onblur="LeaveGap()" class="GapBox" size="6"></input></span> <br /><br />4. You can put cheese or meat between bread to make this. <span class="GapSpan" id="GapSpan3"><input type="text" id="Gap3" onfocus="TrackFocus(3)" onblur="LeaveGap()" class="GapBox" size="10"></input></span> <br /><br />5. This is part of a farm where you often see vegetable plants <span class="GapSpan" id="GapSpan4"><input type="text" id="Gap4" onfocus="TrackFocus(4)" onblur="LeaveGap()" class="GapBox" size="7"></input></span> 
 </div>
 </form>
 </div>
-<br /><br />
 
 
 
