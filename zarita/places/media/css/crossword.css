@@ -1,0 +1,98 @@
+/* brown: 38341c
+red ab0d0d
+*/
+
+#clues h5 {
+	font-size:14px;
+	margin-bottom:5px;
+}
+
+#crossword {
+	text-align:center;
+}
+
+.crossword {
+	border-collapse:collapse;
+	font-family:"Courier New", Courier, monospace;
+	margin-left:auto;
+	margin-right:auto;
+	clear:both;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.crossword td {
+	border:1px solid black;
+	padding:0;
+	margin:0;
+	vertical-align:middle;
+	padding:0;
+	text-align:center;
+	width:30px;
+	height:30px;
+}
+
+.crossword .no-border {
+	border:none;
+}
+
+#clues {
+	font-size:12px;	
+}
+
+#clues ol {
+	list-style-type:none;	
+	padding-top:0;
+}
+
+#clues li, #clues p {
+	margin-bottom:5px;
+}
+
+#across-box {
+	float:left;
+	width:45%;
+}
+
+#down-box {
+	float:right;
+	width:45%;
+}
+
+li, ol {
+	margin:0;
+	padding:0;
+}
+
+h2 {
+	text-align:center;
+}
+
+.ms-word {
+	padding-top:10px;
+	width:100%;
+}
+
+.ms-word td {
+	vertical-align:top;
+	padding:5px;
+	width:45%;
+}
+
+td.ms-word-cell {
+	vertical-align:bottom;
+}
+
+.crossword div {
+	font-size:10px;
+	text-align:left;
+	display:block;
+
+}
+
+
+.ms-word td p {
+	margin-bottom:5px;
+	margin-top:0px;
+}
+
