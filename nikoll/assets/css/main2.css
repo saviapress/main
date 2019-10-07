@@ -30,10 +30,6 @@ div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
 }
 
 
-/*prueba para habilitar hover en android */
-@media (any-pointer: coarse) {
-}
-
 .ClozeBody abbr:hover {
     color: #ff0000;
 	cursor: help;
