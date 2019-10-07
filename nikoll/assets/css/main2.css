@@ -33,11 +33,6 @@ div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
 /* prueba para crear efecto hover android*/
 .ClozeBody span:active:after {
     content:attr(title);
-    padding:5px;
-    border:1px solid #ccc;
-    top:5px;
-    right:10%;
-    background: #bada55;
 }
 
 
