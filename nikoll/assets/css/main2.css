@@ -30,7 +30,7 @@ div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
 }
 
 
-/* prueba para crear efecto onclik*/
+/* prueba para crear efecto onclik
 .ClozeBody span:active:after {
     content:attr(title);
 	color: black;
@@ -41,6 +41,7 @@ div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
     background: white;
 	cursor: help;
 }
+*/
 
 
 .ClozeBody abbr:hover {
