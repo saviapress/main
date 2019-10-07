@@ -20,6 +20,32 @@ div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
 }
 /**/
 
+/* prueba para crear efecto hover*/
+.ClozeBody span:hover {
+    color: #ff0000;
+	cursor: help;
+	/*
+	cursor: context-menu;
+	*/
+}
+
+.ClozeBody abbr:hover {
+    color: #ff0000;
+	cursor: help;
+	/*
+	cursor: context-menu;
+	*/
+}
+
+/*
+span:hover {
+    color: #ff0000;
+}
+
+abbr:hover {
+    color: #ff0000;
+}
+*/
 
 /* parece que funciona bien sin esto
 div.ReadingContainer, div.ExerciseContainer{
