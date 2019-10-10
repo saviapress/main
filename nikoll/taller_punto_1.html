@@ -37,28 +37,14 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h2>Taller  | punto 2</h2>
+										<h2>Taller  | punto 1</h2>
 									</header>
 								    
-									<p>El <i><b>first (1)</b> conditional</i>  es para situaciones probables. Si la condicion (algo probable) se cumple, el resultado va muy seguramente a ocurrir también. <br><br>
-									
-									Si nos apresuramos, alcanzaremos el bus <br>
-									(<i>If we hurry, we will catch te bus</i>)<br><br>
-									
-									En <i><b>first (1)</b> conditional</i>  el verbo de la condicion va en <b>presente</b> y el verbo del resultado va en <b>futuro (will + verbo) :</b><br></p>
-									
-									<span class="image main"><img src="images/first.jpg" alt="" /></span>
-						            
-									
-									<hr class="major" />
+									<p>Este punto se trata de comprensión de lectura. </p>
+									<p>Para practicar traducción hay un botón. Primero tratar de traducir por cuenta propia y luego usar el botón para verificar si la traducción estuvo bien</p>
+									<p>Tambien hay algunas preguntas adicionales (que no estan en el taller original) para practicar comprensión de lectura</p>
 									
 									
-									<p>2. Write the correct forms. <font color = "orange">Frist</font> conditional</p>
-									
-									
-									
-									
-
 
 
 <script>
@@ -375,21 +361,21 @@ function ClearTextBoxes(){
 var CurrQNum = 0;
 var CorrectIndicator = '&#x2714;';
 var IncorrectIndicator = '&#x2718;';
-var YourScoreIs = '';
+var YourScoreIs = 'Your score is ';
 
 //New for 6.2.2.0
-var CompletedSoFar = ' ';
-var ExerciseCompleted = '';
-var ShowCompletedSoFar = false;
+var CompletedSoFar = 'Questions completed so far: ';
+var ExerciseCompleted = 'You have completed the exercise.';
+var ShowCompletedSoFar = true;
 
-var ContinuousScoring = false;
-var CorrectFirstTime = '';
-var ShowCorrectFirstTime = false;
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Questions answered correctly first time: ';
+var ShowCorrectFirstTime = true;
 var ShuffleQs = false;
 var ShuffleAs = false;
 var DefaultRight = 'Correct!';
 var DefaultWrong = 'Sorry! Try again.';
-var QsToShow = 10;
+var QsToShow = 8;
 var Score = 0;
 var Finished = false;
 var Qs = null;
@@ -576,62 +562,66 @@ I[0]=new Array();I[0][0]=100;
 I[0][1]='';
 I[0][2]='0';
 I[0][3]=new Array();
-I[0][3][0]=new Array('meet','',1,100,1);
-I[0][3][1]=new Array('will meet','',0,0,1);
+I[0][3][0]=new Array('he was getting a tattoo','',1,100,1);
+I[0][3][1]=new Array('he was getting acupuncture','',0,0,1);
+I[0][3][2]=new Array('he is was getting his ears pierced','',0,0,1);
+I[0][3][3]=new Array('he was getting a nose ring','',0,0,1);
 I[1]=new Array();I[1][0]=100;
 I[1][1]='';
 I[1][2]='0';
 I[1][3]=new Array();
-I[1][3][0]=new Array('has','',1,100,1);
-I[1][3][1]=new Array('doesn\'t have','',0,0,1);
+I[1][3][0]=new Array('brave','',1,100,1);
+I[1][3][1]=new Array('cowardly','',0,0,1);
+I[1][3][2]=new Array('old fashioned','',0,0,1);
+I[1][3][3]=new Array('nitwits','',0,0,1);
 I[2]=new Array();I[2][0]=100;
 I[2][1]='';
 I[2][2]='0';
 I[2][3]=new Array();
-I[2][3][0]=new Array('don\'t come','',0,0,1);
-I[2][3][1]=new Array('won\'t come','',1,100,1);
+I[2][3][0]=new Array('they think it is fashionable','',1,100,1);
+I[2][3][1]=new Array('they like pain','',0,0,1);
+I[2][3][2]=new Array('they think it will wash off in the bath','',0,0,1);
+I[2][3][3]=new Array('they are religious','',0,0,1);
 I[3]=new Array();I[3][0]=100;
 I[3][1]='';
-I[3][2]='0';
+I[3][2]='3';
 I[3][3]=new Array();
-I[3][3][0]=new Array('will refuse','',0,0,1);
-I[3][3][1]=new Array('refuses','',1,100,1);
+I[3][3][0]=new Array('wearing a tattoo','',1,100,1);
+I[3][3][1]=new Array('wearing special clothes','',1,100,1);
+I[3][3][2]=new Array('wearing a special uniform','',1,100,1);
+I[3][3][3]=new Array('wearing a special kind of socks','',0,0,1);
 I[4]=new Array();I[4][0]=100;
 I[4][1]='';
-I[4][2]='0';
+I[4][2]='3';
 I[4][3]=new Array();
-I[4][3][0]=new Array('rent','',1,100,1);
-I[4][3][1]=new Array('will rent','',0,0,1);
+I[4][3][0]=new Array('to sell cars','',1,100,1);
+I[4][3][1]=new Array('by using fashion models','',1,100,1);
+I[4][3][2]=new Array('by using sports stars','',1,100,1);
+I[4][3][3]=new Array('by using endangered species','',0,0,1);
 I[5]=new Array();I[5][0]=100;
 I[5][1]='';
-I[5][2]='0';
+I[5][2]='3';
 I[5][3]=new Array();
-I[5][3][0]=new Array('\'ll have','',0,0,1);
-I[5][3][1]=new Array('has','',1,100,1);
+I[5][3][0]=new Array('wealth','',1,100,1);
+I[5][3][1]=new Array('status','',1,100,1);
+I[5][3][2]=new Array('success','',1,100,1);
+I[5][3][3]=new Array('debt','',0,0,1);
 I[6]=new Array();I[6][0]=100;
 I[6][1]='';
-I[6][2]='0';
+I[6][2]='3';
 I[6][3]=new Array();
-I[6][3][0]=new Array('plant','',0,0,1);
-I[6][3][1]=new Array('\'ll plant','',1,100,1);
+I[6][3][0]=new Array('to show membership in a band','',1,100,1);
+I[6][3][1]=new Array('to show a lover\'s name','',1,100,1);
+I[6][3][2]=new Array('to show pictures of animals that may become extinct','',1,100,1);
+I[6][3][3]=new Array('to show which language you speak','',0,0,1);
 I[7]=new Array();I[7][0]=100;
 I[7][1]='';
 I[7][2]='0';
 I[7][3]=new Array();
-I[7][3][0]=new Array('work','',1,100,1);
-I[7][3][1]=new Array('will work','',0,0,1);
-I[8]=new Array();I[8][0]=100;
-I[8][1]='';
-I[8][2]='0';
-I[8][3]=new Array();
-I[8][3][0]=new Array('is','',1,100,1);
-I[8][3][1]=new Array('will be','',0,0,1);
-I[9]=new Array();I[9][0]=100;
-I[9][1]='';
-I[9][2]='0';
-I[9][3]=new Array();
-I[9][3][0]=new Array('are','',0,0,1);
-I[9][3][1]=new Array('\'ll be','',1,100,1);
+I[7][3][0]=new Array('the influence of friends','',0,0,1);
+I[7][3][1]=new Array('the influence of the media','',0,0,1);
+I[7][3][2]=new Array('a desire to express himself','',0,0,1);
+I[7][3][3]=new Array('all of the above','',1,100,1);
 
 
 function StartUp(){
@@ -817,7 +807,7 @@ function CheckMCAnswer(QNum, ANum, Btn){
 	Btn.style.display = 'inline';
 	
 //Finally, show the feedback	
-	//ShowMessage(Feedback);
+	ShowMessage(Feedback);
 	
 //Check whether all questions are now done
 	CheckFinished();
@@ -882,6 +872,85 @@ function FinalAnswer(QNum){
 }
 
 
+
+
+
+function CheckMultiSelAnswer(QNum){
+//bail if question doesn't exist or exercise finished
+	if ((State[QNum].length < 1)||(Finished == true)){return;}
+
+//Increment the tries for this question
+	State[QNum][2]++;
+	
+	var ShouldBeChecked;
+	var Matches = 0;
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	
+//Check if there are any mismatches
+	Feedback = '';
+	var CheckBox = null;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		CheckBox = document.getElementById('Q_' + QNum + '_' + ANum + '_Chk');
+		if (CheckBox.checked == true){
+			State[QNum][5] += 'Y';
+		}
+		else{
+			State[QNum][5] += 'N';
+		}
+		ShouldBeChecked = (I[QNum][3][ANum][2] == 1);
+		if (ShouldBeChecked == CheckBox.checked){
+			Matches++;
+		}
+		else{
+			Feedback = I[QNum][3][ANum][1];
+		}
+	}
+//Add the hit readout
+	Feedback = Matches + ' / ' + I[QNum][3].length + '<br />' + Feedback;
+	if (Matches == I[QNum][3].length){
+//It's right
+		CalculateMultiSelQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+		
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's wrong -- Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+	}
+		
+//Show the feedback
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMultiSelQuestionScore(QNum){
+	var Tries = State[QNum][2];
+	var TotAns = State[QNum][1].length;
+	
+//Make sure it's not already complete
+	if (State[QNum][0] < 0){
+		State[QNum][0] = (TotAns - (Tries-1)) / TotAns;
+		if (State[QNum][0] < 0){
+			State[QNum][0] = 0;
+		}
+	}
+}
 
 
 
@@ -1012,6 +1081,8 @@ function CheckFinished(){
 <div class="Titles">
 	<h2 class="ExerciseTitle"></h2>
 
+	<h3 class="ExerciseSubtitle">Quiz</h3>
+
 
 
 </div>
@@ -1022,6 +1093,18 @@ function CheckFinished(){
 
 
 <div id="ContainerDiv">
+
+
+<div class="ReadingContainer">
+
+	<div id="Reading">
+
+		<div id="ReadingDiv">
+<div class="ReadingText"><!-- Rounded switch --><label class="boton"><input class="onoff" type="checkbox"></input><span class="deslizador redondo"></span><br><br><font color="grey"><i>Traducci&#x00F3;n</i></font><div class = "contenido"><br><br><h3>Why People Get Tattoos <font color="grey"> (Porqu&#x00E9; las personas se hacen tatuajes ) </font></h3>		<p><br>		Jack lay, <font color="grey"> (Jack permaneci&#x00F3;, ) </font><br> quiet <font color="grey"> (en silencio) </font><br> and <font color="grey"> (y) </font><br> unmoving, <font color="grey"> (sin moverse, ) </font><br> for thirty minutes <font color="grey"> (por treinta minutos) </font><br> while a stranger <font color="grey"> (mientras un extra&#x00F1;o) </font><br> repeatedly stabbed him <font color="grey"> (lo pinchaba repetidamente) </font><br> with sharp needles, <font color="grey"> (con agujas afiladas, ) </font><br> causing blood to pour steadily out of his leg. <font color="grey"> (causando que sangre saliera constantemente de su pierna ) </font><br><br />		Jack was getting a tattoo. <font color="grey"> (Jack estaba haciendose un tatuaje. ) </font><br><br><br />		His friend Tony had recently gotten a tattoo, <font color="grey"> (Su amigo Tony se habia hecho un tatuaje recientemente, ) </font><br> and Jack was so impressed <font color="grey"> (y Jack estaba tan impresionado) </font><br> by Tony's bravery <font color="grey"> (por la valentia de Tony) </font><br> and his tattoo <font color="grey"> (y su tatuaje) </font><br> that he decided <font color="grey"> (que decidi&#x00F3;) </font><br> to get one <font color="grey"> (hacerse uno) </font><br> too. <font color="grey"> (tambi&#x00E9;n.) </font><br><br><br />		Getting a tattoo <font color="grey"> (Hacerse un tatuaje) </font><br> because your friends <font color="grey"> (porque sus amigos) </font><br> and peers <font color="grey"> (y colegas) </font><br> have them <font color="grey"> (los tienen) </font><br> is just one of the reasons <font color="grey"> (es solamente una de las razones) </font><br> why <font color="grey"> (porque) </font><br> a lot of <font color="grey"> ( muchos) </font><br> young people <font color="grey"> ( jovenes) </font><br> in North America <font color="grey"> ( en Norteamerica) </font><br> get tattoos. <font color="grey"> (se hacen tatuajes.) </font><br><br><br />		Peer pressure, <font color="grey"> (presi&#x00F3;n de colegas, ) </font><br> media influence, <font color="grey"> (influencia medi&#x00E1;tica,) </font><br> and personal expression <font color="grey"> (y expression personal) </font><br> are some <font color="grey"> (son algunas) </font><br> of the common reasons <font color="grey"> (de las razones comunes) </font><br> for wearing tattoos <font color="grey"> (para llevar tatuajes) </font><br> today. <font color="grey"> (hoy en dia.) </font><br><br><br /><br />		The desire to be <font color="grey"> (El deseo de ser) </font><br> part of a group, <font color="grey"> (parte de un grupo,) </font><br> to be accepted <font color="grey"> (ser aceptados) </font><br> by one's friends <font color="grey"> (por los amigos de uno) </font><br> or peers, <font color="grey"> (o colegas,) </font><br> can have <font color="grey"> (puede tener) </font><br> a great influence <font color="grey"> (una gran influencia) </font><br> on what <font color="grey"> (en lo que) </font><br> a person does. <font color="grey"> (una persona hace.) </font><br><br><br />		Sometimes, <font color="grey"> (a veces,) </font><br> wearing a tattoo <font color="grey"> (llevar un tatuaje) </font><br> can be <font color="grey"> (puede ser) </font><br> a sign <font color="grey"> (una se&#x00F1;al) </font><br> that you belong <font color="grey"> (que se pertenece) </font><br> to a certain group. <font color="grey"> (a un cierto grupo.) </font><br> <br><br />		Gangs <font color="grey"> (pandillas) </font><br> often <font color="grey"> (a medudo) </font><br> use <font color="grey"> (usan) </font><br> special clothes <font color="grey"> (ropa especial) </font><br> and tattoos <font color="grey"> (y tatuajes) </font><br> to identify <font color="grey"> (para identificar) </font><br> their particular group. <font color="grey"> (su grupo en particular.) </font><br><br><br />		For example, <font color="grey"> (por ejemplo,) </font><br> in one gang <font color="grey"> (en una pandilla) </font><br> all <font color="grey"> (todos) </font><br> the members <font color="grey"> (los miembros) </font><br> may wear <font color="grey"> (puede que vistan) </font><br> green army jackets <font color="grey"> (chaquetas militares verdes) </font><br> and have <font color="grey"> (y tengan) </font><br> large 'Xs' <font color="grey"> (grandes 'Xs') </font><br> tattooed <font color="grey"> (tatuadas) </font><br> on <font color="grey"> (en) </font><br> their arms. <font color="grey"> (sus brasos.) </font><br><br><br />		It is not only <font color="grey"> (no es solamente) </font><br> gangs <font color="grey"> (pandillas) </font><br> that have <font color="grey"> (que tienen) </font><br> this type <font color="grey"> (este tipo) </font><br> of special 'uniform'. <font color="grey"> (de &#x2018;uniforme&#x2019; especial.) </font><br> Young people <font color="grey"> (jovenes) </font><br> often <font color="grey"> (a menudo) </font><br> belong <font color="grey"> (pertenecen) </font><br> to a <font color="grey"> (a un) </font><br> certain group <font color="grey"> (cierto grupo) </font><br>of friends. <font color="grey"> (de amigos.) </font><br><br> <br />		Some of these <font color="grey"> (algunos de estos) </font><br> groups <font color="grey"> (grupos) </font><br> wear only <font color="grey"> (llevan solamente) </font><br> brand-name clothes. <font color="grey"> (ropa de marca.) </font><br> Some <font color="grey"> (Algunos) </font><br> wear only <font color="grey"> (llevan solamente) </font><br> black clothes. <font color="grey"> (ropa negra.) </font><br> Others wear tattoos. <font color="grey"> (Otros llevan tatuajes.) </font><br><br><br /><br />		When a person's friends <font color="grey"> (Cuando los amigos de una persona) </font><br> are all doing <font color="grey"> (estan todos haciendo) </font><br> something, <font color="grey"> (algo,) </font><br> such as <font color="grey"> (como) </font><br> getting a tattoo, <font color="grey"> (haciendose un tatuaje,) </font><br> that person <font color="grey"> (esa persona) </font><br> is more likely <font color="grey"> (es mas propensa) </font><br> to do <font color="grey"> (a hacer) </font><br> the same thing, <font color="grey"> (la misma cosa,) </font><br> and get a tattoo <font color="grey"> (y hacerse un tatuaje) </font><br> too. <font color="grey"> (tambien.) </font><br><br><br /><br />		The media <font color="grey"> (los medios) </font><br> is another <font color="grey"> (es otra) </font><br> big influence <font color="grey"> (gran influencia) </font><br> behind <font color="grey"> (detras de) </font><br> the popularity <font color="grey"> (la popularidad) </font><br> of tattoos <font color="grey"> (de los tatuajes) </font><br> in North America. <font color="grey"> (en Norteamerica.) </font><br> A wide <font color="grey"> (una amplia) </font><br> variety of media images <font color="grey"> (variedad de imagenes mediaticas) </font><br> show tattoos. <font color="grey"> (muestran tatuajes.) </font><br><br><br />		Tattoos <font color="grey"> (tatuajes) </font><br> can be seen <font color="grey"> (pueden ser vistos) </font><br> on people <font color="grey"> (en personas) </font><br> appearing <font color="grey"> (apareciendo) </font><br> in commercials <font color="grey"> (en propagandas) </font><br> selling <font color="grey"> (vendiendo) </font><br> expensive cars. <font color="grey"> (carros costosos.) </font><br> Famous sports heroes <font color="grey"> (famosos heroes del deporte) </font><br> with tattoos <font color="grey"> (con tatuajes) </font><br> are shown <font color="grey"> (son mostrados) </font><br> in magazines. <font color="grey"> (en revistas.) </font><br><br><br />		Fashion models <font color="grey"> (modelos de ropa) </font><br> are often seen <font color="grey"> (son a menudo vistos) </font><br> in magazines <font color="grey"> (en revistas) </font><br> and on TV <font color="grey"> (y TV) </font><br>wearing <font color="grey"> (vistiendo) </font><br> designer clothes <font color="grey"> (ropa de dise&#x00F1;o) </font><br> that show <font color="grey"> (que muestran) </font><br> their bodies <font color="grey"> (sus cuerpos) </font><br> tattooed <font color="grey"> (tatuados) </font><br> with detailed <font color="grey"> (con detallados) </font><br> and colourful <font color="grey"> (y coloridos) </font><br> patterns. <font color="grey"> (dise&#x00F1;os.) </font><br><br><br />		These media images <font color="grey"> (estas imagenes medi&#x00E1;ticas) </font><br> link <font color="grey"> (conectan) </font><br> tattoos <font color="grey"> (tatuajes) </font><br> to ideas <font color="grey"> (a ideas) </font><br> of wealth, <font color="grey"> (de riqueza,) </font><br> success, <font color="grey"> (&#x00E9;xito,) </font><br> and status. <font color="grey"> (y estatus.) </font><br><br> <br />		As a result, <font color="grey"> (Como resultado,) </font><br> many people <font color="grey"> (muchas personas) </font><br> decide <font color="grey"> (deciden) </font><br> to get a tattoo <font color="grey"> (hacerse un tatuaje) </font><br> for its <font color="grey"> (por su) </font><br> fashion and status value. <font color="grey"> (valor de moda y estatus.) </font><br><br><br /><br />		It is not always <font color="grey"> (no es siempre) </font><br> the influence <font color="grey"> (la influencia) </font><br> of other people <font color="grey"> (de otras personas) </font><br> or the media <font color="grey"> (o los medios) </font><br> that results <font color="grey"> (que resultan) </font><br> in a person <font color="grey"> (en que una persona) </font><br> getting a tattoo. <font color="grey"> (se haga un tatuaje.) </font><br><br><br />		Many people decide <font color="grey"> (Muchas personas deciden) </font><br> to wear tattoos <font color="grey"> (llevar tatuajes) </font><br> in order to <font color="grey"> (para) </font><br> express <font color="grey"> (expresar) </font><br> their <font color="grey"> (su) </font><br> artistic nature, <font color="grey"> (naturaleza artistica, ) </font><br> their beliefs, <font color="grey"> (sus creencias, ) </font><br> or their feelings <font color="grey"> (o sus sentimientos) </font><br> -- in other words, <font color="grey"> (-- en otras palabras, ) </font><br> to show <font color="grey"> (para mostrar) </font><br> their individuality. <font color="grey"> (su individualidad. ) </font><br><br><br />		A musician <font color="grey"> (Un m&#x00FA;sico) </font><br> in a rock band <font color="grey"> (en una banda de rock) </font><br> may get a tattoo <font color="grey"> (puede hacerse un tatuaje) </font><br> of a guitar <font color="grey"> (de una guitarra) </font><br> on the arm. <font color="grey"> (en el brazo.) </font><br> Some environmentalists <font color="grey"> (Algunos medioambientalistas) </font><br> may tattoo <font color="grey"> (pueden tatuarse) </font><br> pictures <font color="grey"> (imagenes) </font><br> of endangered animals <font color="grey"> (de animals en peligro) </font><br> on their shoulders. <font color="grey"> (en sus espaldas.) </font><br><br> <br />		Lovers <font color="grey"> (Enamorados) </font><br> may tattoo <font color="grey"> (pueden tratuarse ) </font><br> each others' names <font color="grey"> (los nombres de cada otro) </font><br> over <font color="grey"> (sobre) </font><br> their hearts. <font color="grey"> (sus corazones.) </font><br> A tattoo <font color="grey"> (Un tatuaje) </font><br> can be <font color="grey"> (puede ser) </font><br> a public sign <font color="grey"> (una se&#x00F1;al p&#x00FA;blica) </font><br> to show <font color="grey"> (para mostrar) </font><br> what is important <font color="grey"> (lo que es importante) </font><br> in a person's life. <font color="grey"> (en la vida de la persona.) </font><br><br><br /><br />		As you can see, <font color="grey"> (Como se puede ver) </font><br> there are many reasons <font color="grey"> (hay muchas razones) </font><br> why <font color="grey"> (porque) </font><br> young North Americans <font color="grey"> (j&#x00F3;venes norteamericanos) </font><br> get tattoos. <font color="grey"> (se hacen tatuajes.) </font><br> A tattoo can be part of <font color="grey"> (Un tatuaje puede ser parte del) </font><br> a group's uniform <font color="grey"> (uniforme de un grupo) </font><br>. It can be a sign of fashion. <font color="grey"> (Puede ser una se&#x00F1;al de moda.) </font><br> It can be an expression of individuality. <font color="grey"> (Puede ser una expression de individualidad. ) </font><br><br><br />		The decision to get a tattoo <font color="grey"> (la decision de hacerse un tatuaje) </font><br> is most often <font color="grey"> (es mas a menudo) </font><br> a result <font color="grey"> (un resultado) </font><br> of the influence of friends <font color="grey"> (de la influencia de amigos) </font><br> or media <font color="grey"> (o medios) </font><br> or the desire to express <font color="grey"> (o el deseo de expresarse) </font><br> oneself. <font color="grey"> (a si mismo.) </font><br><br><br />		For Jack, <font color="grey"> (Para Jack) </font><br> it was <font color="grey"> (fu&#x00E9;) </font><br> a mixture <font color="grey"> (una mezcla) </font><br> of all three. <font color="grey"> (de todos tres.) </font></p></div></label></div>
+		</div>
+	</div>
+
+</div>
 
 
 
@@ -1045,16 +1128,14 @@ function CheckFinished(){
 </div>
  
 <ol class="QuizQuestions" id="Questions">
-<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Give it to him if you ____________ him. </div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;meet</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;will meet</li></ol></li>
-<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">Unless she ____________ a rest, she'll have a headache.</div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;has</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;doesn't have</li></ol></li>
-<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">Even if I drive fast, we ____________ come on time, I'm afraid.</div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;don't come</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;won't come</li></ol></li>
-<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText">What will you do if Bob ____________ ?</div><ol class="MCAnswers"><li id="Q_3_0"><button class="FuncButton" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;will refuse</li><li id="Q_3_1"><button class="FuncButton" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;refuses</li></ol></li>
-<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText">If we ____________ a car, we can visit a lot of places.</div><ol class="MCAnswers"><li id="Q_4_0"><button class="FuncButton" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;rent</li><li id="Q_4_1"><button class="FuncButton" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;will rent</li></ol></li>
-<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText">He'll join us on Monday as long as he ____________ a day off.</div><ol class="MCAnswers"><li id="Q_5_0"><button class="FuncButton" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;'ll have</li><li id="Q_5_1"><button class="FuncButton" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;has</li></ol></li>
-<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText">If the weather is nice tomorrow, we ____________ plant the trees.</div><ol class="MCAnswers"><li id="Q_6_0"><button class="FuncButton" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;plant</li><li id="Q_6_1"><button class="FuncButton" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;'ll plant</li></ol></li>
-<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">You will get the job on condition that you _____________ hard.</div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;work</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;will work</li></ol></li>
-<li class="QuizQuestion" id="Q_8" style="display: none;"><div class="QuestionText">The plane will take off on time provided that the runway _____________ free</div><ol class="MCAnswers"><li id="Q_8_0"><button class="FuncButton" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;is</li><li id="Q_8_1"><button class="FuncButton" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;will be</li></ol></li>
-<li class="QuizQuestion" id="Q_9" style="display: none;"><div class="QuestionText">As long as there's a suitable train, we _______________ there before dinner</div><ol class="MCAnswers"><li id="Q_9_0"><button class="FuncButton" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;are</li><li id="Q_9_1"><button class="FuncButton" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;'ll be</li></ol></li></ol>
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Jack was stabbed for thirty minutes with a needle because _____________. <br /></div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he was getting a tattoo</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he was getting acupuncture</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he is was getting his ears pierced</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he was getting a nose ring</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">According to the essay, Jack thinks people who get tattoos are ____________. </div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;brave</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;cowardly</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;old fashioned</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;nitwits</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">According to the essay, some people get tattoos because ____________. </div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they think it is fashionable</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they like pain</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they think it will wash off in the bath</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they are religious</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br />According to the essay, which of the following are common ways that people show they belong to a certain group? </div><ol class="MSelAnswers"><li id="Q_3_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_0_Chk" class="MSelCheckbox" />wearing a tattoo</div></form></li><li id="Q_3_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_1_Chk" class="MSelCheckbox" />wearing special clothes</div></form></li><li id="Q_3_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_2_Chk" class="MSelCheckbox" />wearing a special uniform</div></form></li><li id="Q_3_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_3_Chk" class="MSelCheckbox" />wearing a special kind of socks</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(3)">Check</button></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br /><br />According to the essay, which of the following are ways that the media uses tattoos in advertising?</div><ol class="MSelAnswers"><li id="Q_4_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_0_Chk" class="MSelCheckbox" />to sell cars</div></form></li><li id="Q_4_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_1_Chk" class="MSelCheckbox" />by using fashion models</div></form></li><li id="Q_4_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_2_Chk" class="MSelCheckbox" />by using sports stars</div></form></li><li id="Q_4_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_3_Chk" class="MSelCheckbox" />by using endangered species</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(4)">Check</button></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br />According to the essay, media images are linked to</div><ol class="MSelAnswers"><li id="Q_5_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_0_Chk" class="MSelCheckbox" />wealth</div></form></li><li id="Q_5_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_1_Chk" class="MSelCheckbox" />status</div></form></li><li id="Q_5_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_2_Chk" class="MSelCheckbox" />success</div></form></li><li id="Q_5_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_3_Chk" class="MSelCheckbox" />debt</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(5)">Check</button></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br />According to the essay, which of the following are possible artistic reasons for getting tattoos?</div><ol class="MSelAnswers"><li id="Q_6_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_0_Chk" class="MSelCheckbox" />to show membership in a band</div></form></li><li id="Q_6_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_1_Chk" class="MSelCheckbox" />to show a lover's name</div></form></li><li id="Q_6_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_2_Chk" class="MSelCheckbox" />to show pictures of animals that may become extinct</div></form></li><li id="Q_6_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_3_Chk" class="MSelCheckbox" />to show which language you speak</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(6)">Check</button></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">The reason Jack wanted to get a tattoo was ____________. </div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the influence of friends</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the influence of the media</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;a desire to express himself</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;all of the above</li></ol></li></ol>
 
 
 
@@ -1078,6 +1159,10 @@ function CheckFinished(){
 <!-- EndSubmissionForm -->
 
 </body>
+
+
+
+
 
 									
 									
