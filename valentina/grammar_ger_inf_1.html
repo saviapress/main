@@ -12,14 +12,21 @@
 		<link rel="stylesheet" href="assets/css/main2.css" />
 		<link rel="stylesheet" href="assets/css/main4.css" />
 		<link rel="stylesheet" href="assets/css/cspd-player.css" />
+		
+
 	</head>
 
 
 		<!-- Wrapper -->
 			<div id="wrapper">
+			
+			
 
 				<!-- Main -->
 					<div id="main">
+					
+					
+					
 						<div class="inner">
 
 							<!-- Header -->
@@ -154,11 +161,21 @@
 									<h3>Ejercicio 1</h3>
 									<p>Completa los espacios en blanco con Gerundio o to-Infinitivo, según los escuches en el Audio.</p>
 									
+									<!--
 									<p><br><audio controls="controls"><br>
 										<source src="audio/gerund_infinitive_story1.ogg" type="audio/ogg"><br>
 										<source src="audio/gerund_infinitive_story1.mp3" type="audio/mpeg"><br>Your
 										 browser does not support the audio element, so here's a link to the mp3: 
 										 saviapress.com/valentina/audio/gerund_infinitive_story1.mp3<br></audio></p>
+									-->
+									
+									
+									
+									
+
+									
+									
+						
 									
 									
 									
@@ -878,6 +895,11 @@ function TypeChars(Chars){
 
 <body onload="StartUp()" id="TheBody" >
 
+
+
+
+
+
 <!-- BeginTopNavButtons -->
 
 
@@ -886,13 +908,11 @@ function TypeChars(Chars){
 
 <div class="Titles">
 	<h2 class="ExerciseTitle"></h2>
-
-
-
 </div>
 
 <div id="InstructionsDiv" class="StdDiv">
-	<div id="Instructions"></div>
+	<div id="Instructions">
+	</div>
 </div>
 
 
@@ -1170,44 +1190,47 @@ the late nights. <font color = "grey"> &nbsp (trasnoches.)</font><br />
 			
 			
 			
-		<!--Bottom sticky Audio-->
+				<div id="otto">
+				<!--Bottom sticky Audio-->
+
+								    
 		
-		<audio id="cs_audio" controls>
-		  <source src="audio/gerund_infinitive_story1.mp3" type="audio/mpeg">
-		</audio>
+									<audio id="cs_audio" controls>
+									  <source src="audio/gerund_infinitive_story1.mp3" type="audio/mpeg">
+									</audio>
 
 
-		<div style="text-align: center;">
+									<div style="text-align: center;">
 
-		<div id="cs_audioplayer">
+									<div id="cs_audioplayer">
 
-			 <span style="position: relative;left: 0;float: left;font-size: 0.87em;"><span id="cs_audio_current_time">0:0</span></span>
+										 <span style="position: relative;left: 0;float: left;font-size: 0.87em;"><span id="cs_audio_current_time">0:0</span></span>
 
-			 <span id="cs_play_pause_btn" style="position: relative;">
-				 <i class="far fa-play-circle" id="cs_audio_play"></i>
-				 <i class="far fa-pause-circle" id="cs_audio_pause"></i>
-			 </span>
+										 <span id="cs_play_pause_btn" style="position: relative;">
+											 <i class="far fa-play-circle" id="cs_audio_play"></i>
+											 <i class="far fa-pause-circle" id="cs_audio_pause"></i>
+										 </span>
 
-			 <span id="cs_audio_sound" style="position: relative;right: 5px;float: right;margin-left: 15px;top: -2px;">
-				 <i style="vertical-align: middle;font-size: 1.14em;" class="fas fa-volume-down"></i>
-				 <div class="cs_volBar" style="height: 6px; width: 65px;background-color: #ccc;display: inline-block;cursor: pointer;">
-				   <div class="cs_volume" style="height: 6px;width: 28px;background-color: red;position: absolute;"></div>
-				 </div>
+										 <span id="cs_audio_sound" style="position: relative;right: 5px;float: right;margin-left: 15px;top: -2px;">
+											 <i style="vertical-align: middle;font-size: 1.14em;" class="fas fa-volume-down"></i>
+											 <div class="cs_volBar" style="height: 6px; width: 65px;background-color: #ccc;display: inline-block;cursor: pointer;">
+											   <div class="cs_volume" style="height: 6px;width: 28px;background-color: red;position: absolute;"></div>
+											 </div>
 
-			 </span>
-			 <span id="cs_audio_duration" style="position: relative;right: 0;float: right;padding-left: 10px;font-size: 0.87em;"></span>
+										 </span>
+										 <span id="cs_audio_duration" style="position: relative;right: 0;float: right;padding-left: 10px;font-size: 0.87em;"></span>
 
-			 <div class="cs_audio_bar">
-				 <div class="cs_audio_bar_now"></div>
-				 <div class="cs_audio_bar_loaded"></div>
-			 </div>
+										 <div class="cs_audio_bar">
+											 <div class="cs_audio_bar_now"></div>
+											 <div class="cs_audio_bar_loaded"></div>
+										 </div>
 
-		</div>
-		</div>
-		
-		
-			
-			
+									</div>
+									</div>
+                                    			
+
+			<!-- Fin bottom audio -->
+	        </div>
 			
 
 		<!-- Scripts -->
@@ -1217,5 +1240,6 @@ the late nights. <font color = "grey"> &nbsp (trasnoches.)</font><br />
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/cspd-player.js"></script>
-	</body>
+			
+
 </html>
