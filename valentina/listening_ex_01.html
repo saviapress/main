@@ -1,0 +1,1348 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Listening</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main2.css" />
+		<link rel="stylesheet" href="assets/css/main4.css" />
+	</head>
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>English</strong> Listening</a>
+									<!-- Bortkommenterat 
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+									-->
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h2>Comprensión Auditiva  | Ejercicio 1</h2>
+									</header>
+								    
+									
+									<p>En este ejercicio hay que escuchar el audio máximo dos veces y contestar luego las preguntas</p>
+									<p>Si el audio no se ha entendido es su totalidad se pueden usar los botones de ayuda, uno de transcripción y otro de traducción</p>
+									
+									
+									<p><br><audio controls="controls"><br>
+										<source src="audio/Why-People-Get-Tattoos.ogg" type="audio/ogg"><br>
+										<source src="audio/Why-People-Get-Tattoos.mp3" type="audio/mpeg"><br>Your
+										 browser does not support the audio element, so here's a link to the mp3: 
+										 saviapress.com/nikoll/audio/Why-People-Get-Tattoos.mp3<br></audio></p>
+									
+									
+									
+
+
+
+
+
+
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+}
+
+
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JQUIZ CORE JAVASCRIPT CODE
+
+var CurrQNum = 0;
+var CorrectIndicator = '&#x2714;';
+var IncorrectIndicator = '&#x2718;';
+var YourScoreIs = 'Your score is ';
+
+//New for 6.2.2.0
+var CompletedSoFar = 'Questions completed so far: ';
+var ExerciseCompleted = 'You have completed the exercise.';
+var ShowCompletedSoFar = true;
+
+var ContinuousScoring = true;
+var CorrectFirstTime = 'Questions answered correctly first time: ';
+var ShowCorrectFirstTime = true;
+var ShuffleQs = false;
+var ShuffleAs = false;
+var DefaultRight = 'Correct!';
+var DefaultWrong = 'Sorry! Try again.';
+var QsToShow = 8;
+var Score = 0;
+var Finished = false;
+var Qs = null;
+var QArray = new Array();
+var ShowingAllQuestions = false;
+var ShowAllQuestionsCaption = 'Show all questions';
+var ShowOneByOneCaption = 'Show questions one by one';
+var State = new Array();
+var Feedback = '';
+var TimeOver = false;
+var strInstructions = '';
+var Locked = false;
+
+//The following variable can be used to add a message explaining that
+//the question is finished, so no further marking will take place.
+var strQuestionFinished = '';
+
+function CompleteEmptyFeedback(){
+	var QNum, ANum;
+	for (QNum=0; QNum<I.length; QNum++){
+//Only do this if not multi-select
+		if (I[QNum][2] != '3'){
+  		for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+  			if (I[QNum][3][ANum][1].length < 1){
+  				if (I[QNum][3][ANum][2] > 0){
+  					I[QNum][3][ANum][1] = DefaultRight;
+  				}
+  				else{
+  					I[QNum][3][ANum][1] = DefaultWrong;
+  				}
+  			}
+  		}
+		}
+	}
+}
+
+function SetUpQuestions(){
+	var AList = new Array(); 
+	var QList = new Array();
+	var i, j;
+	Qs = document.getElementById('Questions');
+	while (Qs.getElementsByTagName('li').length > 0){
+		QList.push(Qs.removeChild(Qs.getElementsByTagName('li')[0]));
+	}
+	var DumpItem = 0;
+	if (QsToShow > QList.length){
+		QsToShow = QList.length;
+	}
+	while (QsToShow < QList.length){
+		DumpItem = Math.floor(QList.length*Math.random());
+		for (j=DumpItem; j<(QList.length-1); j++){
+			QList[j] = QList[j+1];
+		}
+		QList.length = QList.length-1;
+	}
+	if (ShuffleQs == true){
+		QList = Shuffle(QList);
+	}
+	if (ShuffleAs == true){
+		var As;
+		for (var i=0; i<QList.length; i++){
+			As = QList[i].getElementsByTagName('ol')[0];
+			if (As != null){
+  			AList.length = 0;
+				while (As.getElementsByTagName('li').length > 0){
+					AList.push(As.removeChild(As.getElementsByTagName('li')[0]));
+				}
+				AList = Shuffle(AList);
+				for (j=0; j<AList.length; j++){
+					As.appendChild(AList[j]);
+				}
+			}
+		}
+	}
+	
+	for (i=0; i<QList.length; i++){
+		Qs.appendChild(QList[i]);
+		QArray[QArray.length] = QList[i];
+	}
+
+//Show the first item
+	QArray[0].style.display = '';
+	
+//Now hide all except the first item
+	for (i=1; i<QArray.length; i++){
+		QArray[i].style.display = 'none';
+	}		
+	SetQNumReadout();
+	
+	SetFocusToTextbox();
+}
+
+function SetFocusToTextbox(){
+//if there's a textbox, set the focus in it
+	if (QArray[CurrQNum].getElementsByTagName('input')[0] != null){
+		QArray[CurrQNum].getElementsByTagName('input')[0].focus();
+//and show a keypad if there is one
+		if (document.getElementById('CharacterKeypad') != null){
+			document.getElementById('CharacterKeypad').style.display = 'block';
+		}
+	}
+	else{
+  	if (QArray[CurrQNum].getElementsByTagName('textarea')[0] != null){
+  		QArray[CurrQNum].getElementsByTagName('textarea')[0].focus();	
+//and show a keypad if there is one
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'block';
+			}
+		}
+//This added for 6.0.4.11: hide accented character buttons if no textbox
+		else{
+			if (document.getElementById('CharacterKeypad') != null){
+				document.getElementById('CharacterKeypad').style.display = 'none';
+			}
+		}
+	}
+}
+
+function ChangeQ(ChangeBy){
+//The following line prevents moving to another question until the current
+//question is answered correctly. Uncomment it to enable this behaviour. 
+//	if (State[CurrQNum][0] == -1){return;}
+	if (((CurrQNum + ChangeBy) < 0)||((CurrQNum + ChangeBy) >= QArray.length)){return;}
+	QArray[CurrQNum].style.display = 'none';
+	CurrQNum += ChangeBy;
+	QArray[CurrQNum].style.display = '';
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+	SetQNumReadout();
+	SetFocusToTextbox();
+}
+
+var HiddenReadingShown = false;
+function ShowSpecialReadingForQuestion(){
+//Undocumented function for showing specific reading text elements which change with each question
+//Added on 10/12/2004
+	if (document.getElementById('ReadingDiv') != null){
+		if (HiddenReadingShown == true){
+			document.getElementById('ReadingDiv').innerHTML = '';
+		}
+		if (QArray[CurrQNum] != null){
+//Fix for 6.0.4.25
+			var Children = QArray[CurrQNum].getElementsByTagName('div');
+			for (var i=0; i<Children.length; i++){
+			if (Children[i].className=="HiddenReading"){
+					document.getElementById('ReadingDiv').innerHTML = Children[i].innerHTML;
+					HiddenReadingShown = true;
+//Hide the ShowAllQuestions button to avoid confusion
+					if (document.getElementById('ShowMethodButton') != null){
+						document.getElementById('ShowMethodButton').style.display = 'none';
+					}
+				}
+			}	
+		}
+	}
+}
+
+function SetQNumReadout(){
+	document.getElementById('QNumReadout').innerHTML = (CurrQNum+1) + ' / ' + QArray.length;
+	if ((CurrQNum+1) >= QArray.length){
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('NextQButton') != null){
+			document.getElementById('NextQButton').style.visibility = 'visible';
+		}
+	}
+	if (CurrQNum <= 0){
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'hidden';
+		}
+	}
+	else{
+		if (document.getElementById('PrevQButton') != null){
+			document.getElementById('PrevQButton').style.visibility = 'visible';
+		}
+	}
+}
+
+var I=new Array();
+I[0]=new Array();I[0][0]=100;
+I[0][1]='';
+I[0][2]='0';
+I[0][3]=new Array();
+I[0][3][0]=new Array('he was getting a tattoo','',1,100,1);
+I[0][3][1]=new Array('he was getting acupuncture','',0,0,1);
+I[0][3][2]=new Array('he is was getting his ears pierced','',0,0,1);
+I[0][3][3]=new Array('he was getting a nose ring','',0,0,1);
+I[1]=new Array();I[1][0]=100;
+I[1][1]='';
+I[1][2]='0';
+I[1][3]=new Array();
+I[1][3][0]=new Array('brave','',1,100,1);
+I[1][3][1]=new Array('cowardly','',0,0,1);
+I[1][3][2]=new Array('old fashioned','',0,0,1);
+I[1][3][3]=new Array('nitwits','',0,0,1);
+I[2]=new Array();I[2][0]=100;
+I[2][1]='';
+I[2][2]='0';
+I[2][3]=new Array();
+I[2][3][0]=new Array('they think it is fashionable','',1,100,1);
+I[2][3][1]=new Array('they like pain','',0,0,1);
+I[2][3][2]=new Array('they think it will wash off in the bath','',0,0,1);
+I[2][3][3]=new Array('they are religious','',0,0,1);
+I[3]=new Array();I[3][0]=100;
+I[3][1]='';
+I[3][2]='3';
+I[3][3]=new Array();
+I[3][3][0]=new Array('wearing a tattoo','',1,100,1);
+I[3][3][1]=new Array('wearing special clothes','',1,100,1);
+I[3][3][2]=new Array('wearing a special uniform','',1,100,1);
+I[3][3][3]=new Array('wearing a special kind of socks','',0,0,1);
+I[4]=new Array();I[4][0]=100;
+I[4][1]='';
+I[4][2]='3';
+I[4][3]=new Array();
+I[4][3][0]=new Array('to sell cars','',1,100,1);
+I[4][3][1]=new Array('by using fashion models','',1,100,1);
+I[4][3][2]=new Array('by using sports stars','',1,100,1);
+I[4][3][3]=new Array('by using endangered species','',0,0,1);
+I[5]=new Array();I[5][0]=100;
+I[5][1]='';
+I[5][2]='3';
+I[5][3]=new Array();
+I[5][3][0]=new Array('wealth','',1,100,1);
+I[5][3][1]=new Array('status','',1,100,1);
+I[5][3][2]=new Array('success','',1,100,1);
+I[5][3][3]=new Array('debt','',0,0,1);
+I[6]=new Array();I[6][0]=100;
+I[6][1]='';
+I[6][2]='3';
+I[6][3]=new Array();
+I[6][3][0]=new Array('to show membership in a band','',1,100,1);
+I[6][3][1]=new Array('to show a lover\'s name','',1,100,1);
+I[6][3][2]=new Array('to show pictures of animals that may become extinct','',1,100,1);
+I[6][3][3]=new Array('to show which language you speak','',0,0,1);
+I[7]=new Array();I[7][0]=100;
+I[7][1]='';
+I[7][2]='0';
+I[7][3]=new Array();
+I[7][3][0]=new Array('the influence of friends','',0,0,1);
+I[7][3][1]=new Array('the influence of the media','',0,0,1);
+I[7][3][2]=new Array('a desire to express himself','',0,0,1);
+I[7][3][3]=new Array('all of the above','',1,100,1);
+
+
+function StartUp(){
+
+//If there's only one question, no need for question navigation controls
+	if (QsToShow < 2){
+		document.getElementById('QNav').style.display = 'none';
+	}
+	
+//Stash the instructions so they can be redisplayed
+	strInstructions = document.getElementById('InstructionsDiv').innerHTML;
+	
+
+	
+
+	
+
+	
+	CompleteEmptyFeedback();
+
+	SetUpQuestions();
+	ClearTextBoxes();
+	CreateStatusArray();
+	
+
+	
+//Check search string for q parameter
+	if (document.location.search.length > 0){
+		if (ShuffleQs == false){
+			var JumpTo = parseInt(document.location.search.substring(1,document.location.search.length))-1;
+			if (JumpTo <= QsToShow){
+				ChangeQ(JumpTo);
+			}
+		}
+	}
+//Undocumented function added 10/12/2004
+	ShowSpecialReadingForQuestion();
+}
+
+function ShowHideQuestions(){
+	document.getElementById('ShowMethodButton').style.display = 'none';
+	if (ShowingAllQuestions == false){
+		for (var i=0; i<QArray.length; i++){
+				QArray[i].style.display = '';
+			}
+		document.getElementById('Questions').style.listStyleType = 'decimal';
+		document.getElementById('OneByOneReadout').style.display = 'none';
+		document.getElementById('ShowMethodButton').innerHTML = ShowOneByOneCaption;
+		ShowingAllQuestions = true;
+	}
+	else{
+		for (var i=0; i<QArray.length; i++){
+				if (i != CurrQNum){
+					QArray[i].style.display = 'none';
+				}
+			}
+		document.getElementById('Questions').style.listStyleType = 'none';
+		document.getElementById('OneByOneReadout').style.display = '';
+		document.getElementById('ShowMethodButton').innerHTML = ShowAllQuestionsCaption;
+		ShowingAllQuestions = false;	
+	}
+	document.getElementById('ShowMethodButton').style.display = 'inline';
+}
+
+function CreateStatusArray(){
+	var QNum, ANum;
+//For each item in the item array
+	for (QNum=0; QNum<I.length; QNum++){
+//Check if the question still exists (hasn't been nuked by showing a random selection)
+		if (document.getElementById('Q_' + QNum) != null){
+			State[QNum] = new Array();
+			State[QNum][0] = -1; //Score for this q; -1 shows question not done yet
+			State[QNum][1] = new Array(); //answers
+			for (ANum = 0; ANum<I[QNum][3].length; ANum++){
+				State[QNum][1][ANum] = 0; //answer not chosen yet; when chosen, will store its position in the series of choices
+			}
+			State[QNum][2] = 0; //tries at this q so far
+			State[QNum][3] = 0; //incrementing percent-correct values of selected answers
+			State[QNum][4] = 0; //penalties incurred for hints
+			State[QNum][5] = ''; //Sequence of answers chosen by number
+		}
+		else{
+			State[QNum] = null;
+		}
+	}
+}
+
+
+
+function CheckMCAnswer(QNum, ANum, Btn){
+//if question doesn't exist, bail
+	if (State[QNum].length < 1){return;}
+	
+//Get the feedback
+	Feedback = I[QNum][3][ANum][1];
+	
+//Now show feedback and bail if question already complete
+	if (State[QNum][0] > -1){
+//Add an extra message explaining that the question
+// is finished if defined by the user
+		if (strQuestionFinished.length > 0){Feedback += '<br />' + strQuestionFinished;}
+//Show the feedback
+		ShowMessage(Feedback);
+//New for 6.2.2.1: If you want to mark an answer as correct even when it's the final choice, uncomment this line.
+//		if (I[QNum][3][ANum][2] >= 1){Btn.innerHTML = CorrectIndicator;}else{Btn.innerHTML = IncorrectIndicator;}	
+		return;
+	}
+	
+//Hide the button while processing
+	Btn.style.display = 'none';
+
+//Increment the number of tries
+	State[QNum][2]++;
+	
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
+	
+//Store the try number in the answer part of the State array, for tracking purposes
+	State[QNum][1][ANum] = State[QNum][2];
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	State[QNum][5] += String.fromCharCode(65+ANum);
+	
+//Should this answer be accepted as correct?
+	if (I[QNum][3][ANum][2] < 1){
+//It's wrong
+
+//Mark the answer
+		Btn.innerHTML = IncorrectIndicator;
+		
+//Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+		
+//Check whether this leaves just one MC answer unselected, in which case the Q is terminated
+		var RemainingAnswer = FinalAnswer(QNum);
+		if (RemainingAnswer > -1){
+//Behave as if the last answer had been selected, but give no credit for it
+//Increment the number of tries
+			State[QNum][2]++;		
+		
+//Calculate the score for this question
+			CalculateMCQuestionScore(QNum);
+			
+//Get the overall score and add it to the feedback
+			CalculateOverallScore();
+//New for 6.2.2.1
+			var QsDone = CheckQuestionsCompleted();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's right
+//Mark the answer
+		Btn.innerHTML = CorrectIndicator;
+				
+//Calculate the score for this question
+		CalculateMCQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+
+//Get the overall score and add it to the feedback
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+		}
+		else{
+			WriteToInstructions(QsDone);
+		}
+	}
+	
+//Show the button again
+	Btn.style.display = 'inline';
+	
+//Finally, show the feedback	
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMCQuestionScore(QNum){
+	var Tries = State[QNum][2] + State[QNum][4]; //include tries and hint penalties
+	var PercentCorrect = State[QNum][3];
+	var TotAns = GetTotalMCAnswers(QNum);
+	var HintPenalties = State[QNum][4];
+	
+//Make sure it's not already complete
+
+	if (State[QNum][0] < 0){
+//Allow for Hybrids
+		if (HintPenalties >= 1){
+			State[QNum][0] = 0;
+		}
+		else{
+//This line calculates the score for this question
+			if (TotAns == 1){
+				State[QNum][0] = 1;
+			}
+			else{
+				State[QNum][0] = ((TotAns-((Tries*100)/State[QNum][3]))/(TotAns-1));
+			}
+		}
+//Fix for Safari bug added for version 6.0.3.42 (negative infinity problem)
+		if ((State[QNum][0] < 0)||(State[QNum][0] == Number.NEGATIVE_INFINITY)){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+function GetTotalMCAnswers(QNum){
+	var Result = 0;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			Result++;
+		}
+	}
+	return Result;
+}
+
+function FinalAnswer(QNum){
+	var UnchosenAnswers = 0;
+	var FinalAnswer = -1;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		if (I[QNum][3][ANum][4] == 1){ //This is an MC answer
+			if (State[QNum][1][ANum] < 1){ //This answer hasn't been chosen yet
+				UnchosenAnswers++;
+				FinalAnswer = ANum;
+			}
+		}
+	}
+	if (UnchosenAnswers == 1){
+		return FinalAnswer;
+	}
+	else{
+		return -1;
+	}
+}
+
+
+
+
+
+function CheckMultiSelAnswer(QNum){
+//bail if question doesn't exist or exercise finished
+	if ((State[QNum].length < 1)||(Finished == true)){return;}
+
+//Increment the tries for this question
+	State[QNum][2]++;
+	
+	var ShouldBeChecked;
+	var Matches = 0;
+	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
+	
+//Check if there are any mismatches
+	Feedback = '';
+	var CheckBox = null;
+	for (var ANum=0; ANum<I[QNum][3].length; ANum++){
+		CheckBox = document.getElementById('Q_' + QNum + '_' + ANum + '_Chk');
+		if (CheckBox.checked == true){
+			State[QNum][5] += 'Y';
+		}
+		else{
+			State[QNum][5] += 'N';
+		}
+		ShouldBeChecked = (I[QNum][3][ANum][2] == 1);
+		if (ShouldBeChecked == CheckBox.checked){
+			Matches++;
+		}
+		else{
+			Feedback = I[QNum][3][ANum][1];
+		}
+	}
+//Add the hit readout
+	Feedback = Matches + ' / ' + I[QNum][3].length + '<br />' + Feedback;
+	if (Matches == I[QNum][3].length){
+//It's right
+		CalculateMultiSelQuestionScore(QNum);
+		
+//New for 6.2.2.0
+		var QsDone = CheckQuestionsCompleted();
+		
+		if (ContinuousScoring == true){
+			CalculateOverallScore();
+			if ((ContinuousScoring == true)||(Finished == true)){
+				Feedback += '<br />' + YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone;
+				WriteToInstructions(YourScoreIs + ' ' + Score + '%.' + '<br />' + QsDone);
+			}
+			else{
+				WriteToInstructions(QsDone);
+			}
+		}
+	}
+	else{
+//It's wrong -- Remove any previous score unless exercise is finished (6.0.3.8+)
+		if (Finished == false){
+			WriteToInstructions(strInstructions);
+		}	
+	}
+		
+//Show the feedback
+	ShowMessage(Feedback);
+	
+//Check whether all questions are now done
+	CheckFinished();
+}
+
+function CalculateMultiSelQuestionScore(QNum){
+	var Tries = State[QNum][2];
+	var TotAns = State[QNum][1].length;
+	
+//Make sure it's not already complete
+	if (State[QNum][0] < 0){
+		State[QNum][0] = (TotAns - (Tries-1)) / TotAns;
+		if (State[QNum][0] < 0){
+			State[QNum][0] = 0;
+		}
+	}
+}
+
+
+
+function CalculateOverallScore(){
+	var TotalWeighting = 0;
+	var TotalScore = 0;
+	
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] > -1){
+				TotalWeighting += I[QNum][0];
+				TotalScore += (I[QNum][0] * State[QNum][0]);
+			}
+		}
+	}
+	if (TotalWeighting > 0){
+		Score = Math.floor((TotalScore/TotalWeighting)*100);
+	}
+	else{
+//if TotalWeighting is 0, no questions so far have any value, so 
+//no penalty should be shown.
+		Score = 100; 
+	}
+}
+
+//New for 6.2.2.0
+function CheckQuestionsCompleted(){
+	if (ShowCompletedSoFar == false){return '';}
+	var QsCompleted = 0;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] >= 0){
+				QsCompleted++;
+			}
+		}
+	}
+//Fixes for 6.2.2.2
+	if (QsCompleted >= QArray.length){
+		return ExerciseCompleted;
+	}
+	else{
+		return CompletedSoFar + ' ' + QsCompleted + '/' + QArray.length + '.';
+	}
+}
+
+function CheckFinished(){
+	var FB = '';
+	var AllDone = true;
+	for (var QNum=0; QNum<State.length; QNum++){
+		if (State[QNum] != null){
+			if (State[QNum][0] < 0){
+				AllDone = false;
+			}
+		}
+	}
+	if (AllDone == true){
+	
+//Report final score and submit if necessary
+		CalculateOverallScore();
+		FB = YourScoreIs + ' ' + Score + '%.';
+		if (ShowCorrectFirstTime == true){
+			var CFT = 0;
+			for (QNum=0; QNum<State.length; QNum++){
+				if (State[QNum] != null){
+					if (State[QNum][0] >= 1){
+						CFT++;
+					}
+				}
+			}
+			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+		}
+		
+//New for 6.2.2.0
+		FB += '<br />' + ExerciseCompleted;
+		
+		WriteToInstructions(FB);
+		
+		Finished == true;
+
+
+
+
+		TimeOver = true;
+		Locked = true;
+		
+
+
+		Finished = true;
+		Detail = '<?xml version="1.0"?><hpnetresult><fields>';
+		for (QNum=0; QNum<State.length; QNum++){
+			if (State[QNum] != null){
+				if (State[QNum][5].length > 0){
+					Detail += '<field><fieldname>Question #' + (QNum+1) + '</fieldname><fieldtype>question-tracking</fieldtype><fieldlabel>Q ' + (QNum+1) + '</fieldlabel><fieldlabelid>QuestionTrackingField</fieldlabelid><fielddata>' + State[QNum][5] + '</fielddata></field>';
+				}
+			}
+		}
+		Detail += '</fields></hpnetresult>';
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle"></h2>
+
+<!--
+<!-- Rounded switch <label class="boton"><input class="onoff2" type="checkbox"></input><span class="deslizador redondo"></span><br><br><font color="grey"><i>Transcripción</i></font><div class = "contenido"><br><br><h3></font></p></div></label>
+-->
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+<div class="ReadingContainer">
+
+	<div id="Reading">
+
+		<div id="ReadingDiv">
+<!-- Rounded switch --><label class="boton"><input class="onoff2" type="checkbox"></input><span class="deslizador redondo"></span><br><br><font color="grey"><i>Transcripción</i></font>
+<div class="ReadingText"><!-- Rounded switch --><label class="boton"><input class="onoff" type="checkbox"></input><span class="deslizador redondo"></span><br><br><font color="grey"><i>Traducci&#x00F3;n</i></font><div class = "contenido"><br><br><h3>Why People Get Tattoos <font color="grey"> (Porqu&#x00E9; las personas se hacen tatuajes ) </font></h3>		<p><br>		Jack lay, <font color="grey"> (Jack permaneci&#x00F3;, ) </font><br> quiet <font color="grey"> (en silencio) </font><br> and <font color="grey"> (y) </font><br> unmoving, <font color="grey"> (sin moverse, ) </font><br> for thirty minutes <font color="grey"> (por treinta minutos) </font><br> while a stranger <font color="grey"> (mientras un extra&#x00F1;o) </font><br> repeatedly stabbed him <font color="grey"> (lo pinchaba repetidamente) </font><br> with sharp needles, <font color="grey"> (con agujas afiladas, ) </font><br> causing blood to pour steadily out of his leg. <font color="grey"> (causando que sangre saliera constantemente de su pierna ) </font><br><br />		Jack was getting a tattoo. <font color="grey"> (Jack estaba haciendose un tatuaje. ) </font><br><br><br />		His friend Tony had recently gotten a tattoo, <font color="grey"> (Su amigo Tony se habia hecho un tatuaje recientemente, ) </font><br> and Jack was so impressed <font color="grey"> (y Jack estaba tan impresionado) </font><br> by Tony's bravery <font color="grey"> (por la valentia de Tony) </font><br> and his tattoo <font color="grey"> (y su tatuaje) </font><br> that he decided <font color="grey"> (que decidi&#x00F3;) </font><br> to get one <font color="grey"> (hacerse uno) </font><br> too. <font color="grey"> (tambi&#x00E9;n.) </font><br><br><br />		Getting a tattoo <font color="grey"> (Hacerse un tatuaje) </font><br> because your friends <font color="grey"> (porque sus amigos) </font><br> and peers <font color="grey"> (y colegas) </font><br> have them <font color="grey"> (los tienen) </font><br> is just one of the reasons <font color="grey"> (es solamente una de las razones) </font><br> why <font color="grey"> (porque) </font><br> a lot of <font color="grey"> ( muchos) </font><br> young people <font color="grey"> ( jovenes) </font><br> in North America <font color="grey"> ( en Norteamerica) </font><br> get tattoos. <font color="grey"> (se hacen tatuajes.) </font><br><br><br />		Peer pressure, <font color="grey"> (presi&#x00F3;n de colegas, ) </font><br> media influence, <font color="grey"> (influencia medi&#x00E1;tica,) </font><br> and personal expression <font color="grey"> (y expression personal) </font><br> are some <font color="grey"> (son algunas) </font><br> of the common reasons <font color="grey"> (de las razones comunes) </font><br> for wearing tattoos <font color="grey"> (para llevar tatuajes) </font><br> today. <font color="grey"> (hoy en dia.) </font><br><br><br /><br />		The desire to be <font color="grey"> (El deseo de ser) </font><br> part of a group, <font color="grey"> (parte de un grupo,) </font><br> to be accepted <font color="grey"> (ser aceptados) </font><br> by one's friends <font color="grey"> (por los amigos de uno) </font><br> or peers, <font color="grey"> (o colegas,) </font><br> can have <font color="grey"> (puede tener) </font><br> a great influence <font color="grey"> (una gran influencia) </font><br> on what <font color="grey"> (en lo que) </font><br> a person does. <font color="grey"> (una persona hace.) </font><br><br><br />		Sometimes, <font color="grey"> (a veces,) </font><br> wearing a tattoo <font color="grey"> (llevar un tatuaje) </font><br> can be <font color="grey"> (puede ser) </font><br> a sign <font color="grey"> (una se&#x00F1;al) </font><br> that you belong <font color="grey"> (que se pertenece) </font><br> to a certain group. <font color="grey"> (a un cierto grupo.) </font><br> <br><br />		Gangs <font color="grey"> (pandillas) </font><br> often <font color="grey"> (a medudo) </font><br> use <font color="grey"> (usan) </font><br> special clothes <font color="grey"> (ropa especial) </font><br> and tattoos <font color="grey"> (y tatuajes) </font><br> to identify <font color="grey"> (para identificar) </font><br> their particular group. <font color="grey"> (su grupo en particular.) </font><br><br><br />		For example, <font color="grey"> (por ejemplo,) </font><br> in one gang <font color="grey"> (en una pandilla) </font><br> all <font color="grey"> (todos) </font><br> the members <font color="grey"> (los miembros) </font><br> may wear <font color="grey"> (puede que vistan) </font><br> green army jackets <font color="grey"> (chaquetas militares verdes) </font><br> and have <font color="grey"> (y tengan) </font><br> large 'Xs' <font color="grey"> (grandes 'Xs') </font><br> tattooed <font color="grey"> (tatuadas) </font><br> on <font color="grey"> (en) </font><br> their arms. <font color="grey"> (sus brasos.) </font><br><br><br />		It is not only <font color="grey"> (no es solamente) </font><br> gangs <font color="grey"> (pandillas) </font><br> that have <font color="grey"> (que tienen) </font><br> this type <font color="grey"> (este tipo) </font><br> of special 'uniform'. <font color="grey"> (de &#x2018;uniforme&#x2019; especial.) </font><br> Young people <font color="grey"> (jovenes) </font><br> often <font color="grey"> (a menudo) </font><br> belong <font color="grey"> (pertenecen) </font><br> to a <font color="grey"> (a un) </font><br> certain group <font color="grey"> (cierto grupo) </font><br>of friends. <font color="grey"> (de amigos.) </font><br><br> <br />		Some of these <font color="grey"> (algunos de estos) </font><br> groups <font color="grey"> (grupos) </font><br> wear only <font color="grey"> (llevan solamente) </font><br> brand-name clothes. <font color="grey"> (ropa de marca.) </font><br> Some <font color="grey"> (Algunos) </font><br> wear only <font color="grey"> (llevan solamente) </font><br> black clothes. <font color="grey"> (ropa negra.) </font><br> Others wear tattoos. <font color="grey"> (Otros llevan tatuajes.) </font><br><br><br /><br />		When a person's friends <font color="grey"> (Cuando los amigos de una persona) </font><br> are all doing <font color="grey"> (estan todos haciendo) </font><br> something, <font color="grey"> (algo,) </font><br> such as <font color="grey"> (como) </font><br> getting a tattoo, <font color="grey"> (haciendose un tatuaje,) </font><br> that person <font color="grey"> (esa persona) </font><br> is more likely <font color="grey"> (es mas propensa) </font><br> to do <font color="grey"> (a hacer) </font><br> the same thing, <font color="grey"> (la misma cosa,) </font><br> and get a tattoo <font color="grey"> (y hacerse un tatuaje) </font><br> too. <font color="grey"> (tambien.) </font><br><br><br /><br />		The media <font color="grey"> (los medios) </font><br> is another <font color="grey"> (es otra) </font><br> big influence <font color="grey"> (gran influencia) </font><br> behind <font color="grey"> (detras de) </font><br> the popularity <font color="grey"> (la popularidad) </font><br> of tattoos <font color="grey"> (de los tatuajes) </font><br> in North America. <font color="grey"> (en Norteamerica.) </font><br> A wide <font color="grey"> (una amplia) </font><br> variety of media images <font color="grey"> (variedad de imagenes mediaticas) </font><br> show tattoos. <font color="grey"> (muestran tatuajes.) </font><br><br><br />		Tattoos <font color="grey"> (tatuajes) </font><br> can be seen <font color="grey"> (pueden ser vistos) </font><br> on people <font color="grey"> (en personas) </font><br> appearing <font color="grey"> (apareciendo) </font><br> in commercials <font color="grey"> (en propagandas) </font><br> selling <font color="grey"> (vendiendo) </font><br> expensive cars. <font color="grey"> (carros costosos.) </font><br> Famous sports heroes <font color="grey"> (famosos heroes del deporte) </font><br> with tattoos <font color="grey"> (con tatuajes) </font><br> are shown <font color="grey"> (son mostrados) </font><br> in magazines. <font color="grey"> (en revistas.) </font><br><br><br />		Fashion models <font color="grey"> (modelos de ropa) </font><br> are often seen <font color="grey"> (son a menudo vistos) </font><br> in magazines <font color="grey"> (en revistas) </font><br> and on TV <font color="grey"> (y TV) </font><br>wearing <font color="grey"> (vistiendo) </font><br> designer clothes <font color="grey"> (ropa de dise&#x00F1;o) </font><br> that show <font color="grey"> (que muestran) </font><br> their bodies <font color="grey"> (sus cuerpos) </font><br> tattooed <font color="grey"> (tatuados) </font><br> with detailed <font color="grey"> (con detallados) </font><br> and colourful <font color="grey"> (y coloridos) </font><br> patterns. <font color="grey"> (dise&#x00F1;os.) </font><br><br><br />		These media images <font color="grey"> (estas imagenes medi&#x00E1;ticas) </font><br> link <font color="grey"> (conectan) </font><br> tattoos <font color="grey"> (tatuajes) </font><br> to ideas <font color="grey"> (a ideas) </font><br> of wealth, <font color="grey"> (de riqueza,) </font><br> success, <font color="grey"> (&#x00E9;xito,) </font><br> and status. <font color="grey"> (y estatus.) </font><br><br> <br />		As a result, <font color="grey"> (Como resultado,) </font><br> many people <font color="grey"> (muchas personas) </font><br> decide <font color="grey"> (deciden) </font><br> to get a tattoo <font color="grey"> (hacerse un tatuaje) </font><br> for its <font color="grey"> (por su) </font><br> fashion and status value. <font color="grey"> (valor de moda y estatus.) </font><br><br><br /><br />		It is not always <font color="grey"> (no es siempre) </font><br> the influence <font color="grey"> (la influencia) </font><br> of other people <font color="grey"> (de otras personas) </font><br> or the media <font color="grey"> (o los medios) </font><br> that results <font color="grey"> (que resultan) </font><br> in a person <font color="grey"> (en que una persona) </font><br> getting a tattoo. <font color="grey"> (se haga un tatuaje.) </font><br><br><br />		Many people decide <font color="grey"> (Muchas personas deciden) </font><br> to wear tattoos <font color="grey"> (llevar tatuajes) </font><br> in order to <font color="grey"> (para) </font><br> express <font color="grey"> (expresar) </font><br> their <font color="grey"> (su) </font><br> artistic nature, <font color="grey"> (naturaleza artistica, ) </font><br> their beliefs, <font color="grey"> (sus creencias, ) </font><br> or their feelings <font color="grey"> (o sus sentimientos) </font><br> -- in other words, <font color="grey"> (-- en otras palabras, ) </font><br> to show <font color="grey"> (para mostrar) </font><br> their individuality. <font color="grey"> (su individualidad. ) </font><br><br><br />		A musician <font color="grey"> (Un m&#x00FA;sico) </font><br> in a rock band <font color="grey"> (en una banda de rock) </font><br> may get a tattoo <font color="grey"> (puede hacerse un tatuaje) </font><br> of a guitar <font color="grey"> (de una guitarra) </font><br> on the arm. <font color="grey"> (en el brazo.) </font><br> Some environmentalists <font color="grey"> (Algunos medioambientalistas) </font><br> may tattoo <font color="grey"> (pueden tatuarse) </font><br> pictures <font color="grey"> (imagenes) </font><br> of endangered animals <font color="grey"> (de animals en peligro) </font><br> on their shoulders. <font color="grey"> (en sus espaldas.) </font><br><br> <br />		Lovers <font color="grey"> (Enamorados) </font><br> may tattoo <font color="grey"> (pueden tratuarse ) </font><br> each others' names <font color="grey"> (los nombres de cada otro) </font><br> over <font color="grey"> (sobre) </font><br> their hearts. <font color="grey"> (sus corazones.) </font><br> A tattoo <font color="grey"> (Un tatuaje) </font><br> can be <font color="grey"> (puede ser) </font><br> a public sign <font color="grey"> (una se&#x00F1;al p&#x00FA;blica) </font><br> to show <font color="grey"> (para mostrar) </font><br> what is important <font color="grey"> (lo que es importante) </font><br> in a person's life. <font color="grey"> (en la vida de la persona.) </font><br><br><br /><br />		As you can see, <font color="grey"> (Como se puede ver) </font><br> there are many reasons <font color="grey"> (hay muchas razones) </font><br> why <font color="grey"> (porque) </font><br> young North Americans <font color="grey"> (j&#x00F3;venes norteamericanos) </font><br> get tattoos. <font color="grey"> (se hacen tatuajes.) </font><br> A tattoo can be part of <font color="grey"> (Un tatuaje puede ser parte del) </font><br> a group's uniform <font color="grey"> (uniforme de un grupo) </font><br>. It can be a sign of fashion. <font color="grey"> (Puede ser una se&#x00F1;al de moda.) </font><br> It can be an expression of individuality. <font color="grey"> (Puede ser una expression de individualidad. ) </font><br><br><br />		The decision to get a tattoo <font color="grey"> (la decision de hacerse un tatuaje) </font><br> is most often <font color="grey"> (es mas a menudo) </font><br> a result <font color="grey"> (un resultado) </font><br> of the influence of friends <font color="grey"> (de la influencia de amigos) </font><br> or media <font color="grey"> (o medios) </font><br> or the desire to express <font color="grey"> (o el deseo de expresarse) </font><br> oneself. <font color="grey"> (a si mismo.) </font><br><br><br />		For Jack, <font color="grey"> (Para Jack) </font><br> it was <font color="grey"> (fu&#x00E9;) </font><br> a mixture <font color="grey"> (una mezcla) </font><br> of all three. <font color="grey"> (de todos tres.) </font></p></div></label></div>
+</label>
+		</div>
+	</div>
+
+</div>
+
+
+
+<div class="ExerciseContainer">
+
+<div id="QNav" class="QuestionNavigation">
+
+<p style="text-align: right;">
+<button id="ShowMethodButton" class="FuncButton" onclick="ShowHideQuestions(); return false;">Show all questions</button>
+</p>
+
+<div id="OneByOneReadout">
+<button id="PrevQButton" class="FuncButton" onclick="ChangeQ(-1); return false;">&lt;=</button>
+
+<span id="QNumReadout" class="QNum">&#160;</span>
+
+<button id="NextQButton" class="FuncButton" onclick="ChangeQ(1); return false;">=&gt;</button>
+<br />
+</div>
+
+</div>
+ 
+<ol class="QuizQuestions" id="Questions">
+<li class="QuizQuestion" id="Q_0" style="display: none;"><div class="QuestionText">Jack was stabbed for thirty minutes with a needle because _____________. <br /></div><ol class="MCAnswers"><li id="Q_0_0"><button class="FuncButton" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he was getting a tattoo</li><li id="Q_0_1"><button class="FuncButton" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he was getting acupuncture</li><li id="Q_0_2"><button class="FuncButton" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he is was getting his ears pierced</li><li id="Q_0_3"><button class="FuncButton" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;he was getting a nose ring</li></ol></li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><div class="QuestionText">According to the essay, Jack thinks people who get tattoos are ____________. </div><ol class="MCAnswers"><li id="Q_1_0"><button class="FuncButton" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;brave</li><li id="Q_1_1"><button class="FuncButton" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;cowardly</li><li id="Q_1_2"><button class="FuncButton" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;old fashioned</li><li id="Q_1_3"><button class="FuncButton" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;nitwits</li></ol></li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><div class="QuestionText">According to the essay, some people get tattoos because ____________. </div><ol class="MCAnswers"><li id="Q_2_0"><button class="FuncButton" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they think it is fashionable</li><li id="Q_2_1"><button class="FuncButton" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they like pain</li><li id="Q_2_2"><button class="FuncButton" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they think it will wash off in the bath</li><li id="Q_2_3"><button class="FuncButton" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;they are religious</li></ol></li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br />According to the essay, which of the following are common ways that people show they belong to a certain group? </div><ol class="MSelAnswers"><li id="Q_3_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_0_Chk" class="MSelCheckbox" />wearing a tattoo</div></form></li><li id="Q_3_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_1_Chk" class="MSelCheckbox" />wearing special clothes</div></form></li><li id="Q_3_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_2_Chk" class="MSelCheckbox" />wearing a special uniform</div></form></li><li id="Q_3_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_3_3_Chk" class="MSelCheckbox" />wearing a special kind of socks</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(3)">Check</button></li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br /><br />According to the essay, which of the following are ways that the media uses tattoos in advertising?</div><ol class="MSelAnswers"><li id="Q_4_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_0_Chk" class="MSelCheckbox" />to sell cars</div></form></li><li id="Q_4_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_1_Chk" class="MSelCheckbox" />by using fashion models</div></form></li><li id="Q_4_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_2_Chk" class="MSelCheckbox" />by using sports stars</div></form></li><li id="Q_4_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_4_3_Chk" class="MSelCheckbox" />by using endangered species</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(4)">Check</button></li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br />According to the essay, media images are linked to</div><ol class="MSelAnswers"><li id="Q_5_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_0_Chk" class="MSelCheckbox" />wealth</div></form></li><li id="Q_5_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_1_Chk" class="MSelCheckbox" />status</div></form></li><li id="Q_5_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_2_Chk" class="MSelCheckbox" />success</div></form></li><li id="Q_5_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_5_3_Chk" class="MSelCheckbox" />debt</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(5)">Check</button></li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><div class="QuestionText"><i> pregunta con varias repuestas posibles (elige todas las que creas que responden a la pregunta) </i>: <br><br><br />According to the essay, which of the following are possible artistic reasons for getting tattoos?</div><ol class="MSelAnswers"><li id="Q_6_0"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_0_Chk" class="MSelCheckbox" />to show membership in a band</div></form></li><li id="Q_6_1"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_1_Chk" class="MSelCheckbox" />to show a lover's name</div></form></li><li id="Q_6_2"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_2_Chk" class="MSelCheckbox" />to show pictures of animals that may become extinct</div></form></li><li id="Q_6_3"><form method="post" onsubmit="return false;"><div><input type="checkbox" id="Q_6_3_Chk" class="MSelCheckbox" />to show which language you speak</div></form></li></ol><button class="FuncButton" onclick="CheckMultiSelAnswer(6)">Check</button></li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><div class="QuestionText">The reason Jack wanted to get a tattoo was ____________. </div><ol class="MCAnswers"><li id="Q_7_0"><button class="FuncButton" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the influence of friends</li><li id="Q_7_1"><button class="FuncButton" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;the influence of the media</li><li id="Q_7_2"><button class="FuncButton" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;a desire to express himself</li><li id="Q_7_3"><button class="FuncButton" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;all of the above</li></ol></li></ol>
+
+
+
+</div>
+
+</div>
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									
+                                    <!-- 
+									<hr class="major" />
+
+									<h2>Magna etiam veroeros</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+
+									<hr class="major" />
+
+									<h2>Lorem aliquam bibendum</h2>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+                                    -->
+									
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="listening.html">Listening</a></li>
+										<li><a href="reading.html">Reading</a></li>
+										<li><a href="grammar.html">Grammar</a></li>
+										<li><a href="tests.html">Tests</a></li>
+										<!--
+										<li><a href="generic.html">Generic</a></li>
+										<li><a href="elements.html">Elements</a></li>
+										-->
+										    <!--
+											<span class="opener">Wh-question words</span>
+											<ul>
+												<li><a href="grammar_wh.html">Exercise 1</a></li>
+												<li><a href="grammar_wh_02.html">Exercise 2</a></li>
+												<li><a href="grammar_wh_03.html">Exercise 3</a></li>
+												<li><a href="grammar_wh_04.html">Exercise 4</a></li>
+												<!--
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+												
+											</ul>
+											-->
+										<!--	
+										</li>
+										<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+										<li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										-->
+										<!--
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li>
+										-->
+									</ul>
+								</nav>
+								
+								
+							
+      
+							<!-- Section -->
+							
+							    <!-- 
+								<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+							     --> 
+
+							<!-- Section -->
+								<!--
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+								--> 
+
+                            
+
+							<!-- Footer -->
+								<!--
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+								--> 
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
