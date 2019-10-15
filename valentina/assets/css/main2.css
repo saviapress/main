@@ -6,6 +6,141 @@
 	display: none;
 }
 
+
+/* ESTOS SON LOS CONTROLES PARA boton TOGGLE*/
+
+
+ /* The boton - the box around the deslizador */
+.boton {
+  position: relative;
+  */
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  */
+}
+
+/* Hide default HTML checkbox */
+.boton .onoff {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+
+/* controles cuando off y on off */
+.onoff ~ .contenido font {
+  display: none;
+}
+
+.onoff:checked ~ .contenido font {
+  display: inline-block;
+}
+
+
+
+
+/* The deslizador */
+.deslizador {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  
+}
+
+.deslizador:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+
+.onoff:checked + .deslizador {
+  background-color: #f56a6a; /* #2196F3; */
+}
+
+.onoff:focus + .deslizador {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.onoff:checked + .deslizador:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded deslizadors */
+.deslizador.redondo {
+  border-radius: 34px;
+}
+
+.deslizador.redondo:before {
+  border-radius: 50%;
+} 
+
+
+/* FIN CONTROLES*/
+
+
+
+
+/* para justificar izquierda texto de quiz */
+
+.ReadingText{
+	text-align: left;
+}
+
+
+/* para que division de zpna reading con zona ejercicio aparezca bien*/
+
+div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
+	background-color: #ffffff;
+	text-align: center;
+	font-size: 1rem;
+	color: #000000;
+	padding: 0.5em;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: #000000;
+	margin-bottom: 1px;
+}
+
+div.ReadingContainer, div.ExerciseContainer{
+	min-width: 15em;
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 1px;
+}
+
+div#ContainerDiv{
+	margin: -1px;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+
 /* da control sobre el area del ejercicio en si */
 div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
 	background-color: #ffffff;
@@ -20,6 +155,58 @@ div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
 }
 /**/
 
+/*prueba para habilitar hover en android 
+@media (any-pointer: coarse) {
+  }
+*/
+
+/* prueba para crear efecto hover*/
+.ClozeBody span:hover {
+    color: #ff0000;
+	cursor: help;
+}
+
+
+
+
+/* prueba para crear efecto onclik
+.ClozeBody span:active:after {
+    content:attr(title);
+	color: black;
+    padding:5px;
+    border:1px solid #ccc;
+    top:5px;
+    right:10%;
+    background: white;
+	cursor: help;
+}
+*/
+
+
+
+
+
+.ClozeBody span {
+    position: relative;
+}
+
+.ClozeBody abbr:hover {
+    color: #ff0000;
+	cursor: help;
+	/*
+	cursor: context-menu;
+	*/
+}
+
+/*
+span:hover {
+    color: #ff0000;
+}
+
+abbr:hover {
+    color: #ff0000;
+}
+*/
 
 /* parece que funciona bien sin esto
 div.ReadingContainer, div.ExerciseContainer{
@@ -143,6 +330,8 @@ select{
 */
 
 
+
+
 /* este es el codigo para el cuadrito donde aparece el puntaje*/
 div.Feedback {
 	background-color: #ffffff;
@@ -165,6 +354,7 @@ div.ExerciseDiv{
 	color: #000000;
 }
 
+
 /* JCloze styles */
 
 .ClozeWordList{
@@ -182,7 +372,109 @@ div.ClozeBody{
 /* este es el codigo que pone la respuesta correcta en negrilla*/
 span.GapSpan{
 	font-weight: bold;
+	color: #FE4242;
 }
+
+
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: Geneva,Arial,sans-serif;
+}
+
+.QuestionText{
+	text-align: left;
+	margin: 0px;
+	font-size: 1rem;
+}
+
+.Answer{
+	font-size: 120%;
+}
+
+.PartialAnswer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+	color: #000000;
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+.FuncButton {
+	border-style: solid;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	min-width: 3em;
+
+	border-left-color: #ffffff;
+	border-top-color: #ffffff;
+	border-right-color: #7f7f7f;
+	border-bottom-color: #7f7f7f;
+	color: #000000;
+	background-color: #ffffff;
+
+	border-width: 1pt;
+	cursor: pointer;	
+	box-shadow: 0.2em 0.3em 0.2em #7f7f7f;
+}
+
+.FuncButton:active {
+	box-shadow: none;
+}
+
+.FuncButton:hover{
+	color: #ffffff;
+	background-color: #ffffff; /*#000000;*/
+}
+
+
 
 
 
@@ -247,6 +539,8 @@ mark {
 	color: inherit;
 }
 
+
+/*  Esto crea conflicto con QUIZ (no se ven los cuadros)
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
@@ -258,6 +552,8 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+*/
 
 /* Basic */
 
@@ -2007,7 +2303,7 @@ input, select, textarea {
 
 	label {
 		color: #3d4449;
-		display: block;
+		/*display: block;  /* CAMBIO  PARA QUE boton de traduccion sirviera  */  
 		font-size: 0.9em;
 		font-weight: 600;
 		margin: 0 0 1em 0;
@@ -2099,6 +2395,8 @@ input, select, textarea {
 		padding: 0.75em 1em;
 	}
 
+
+/*
 	input[type="checkbox"],
 	input[type="radio"] {
 		-moz-appearance: none;
@@ -2174,6 +2472,8 @@ input, select, textarea {
 	input[type="checkbox"] + label:before {
 		border-radius: 0.375em;
 	}
+	
+*/
 
 	input[type="radio"] + label:before {
 		border-radius: 100%;
