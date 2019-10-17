@@ -8,7 +8,7 @@
 
 
 /* sticky audio */
-.audio-sticky{position:-webkit-sticky; position:sticky; top:0; z-index: 1;}
+.audio-sticky{position:-webkit-sticky; position:sticky; top:0; z-index: 1;  z-index:99999;}
 
 
 /* ESTOS SON LOS CONTROLES PARA boton TOGGLE*/
