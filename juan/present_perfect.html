@@ -1,0 +1,1156 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Grammar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main2.css" />
+		<link rel="stylesheet" href="assets/css/main4.css" />
+		<link rel="stylesheet" href="assets/css/cspd-player.css" />
+
+	</head>
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+			
+			
+
+				<!-- Main -->
+					<div id="main">
+					
+					
+					
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>English</strong> Grammar</a>
+									<!-- Bortkommenterat 
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+									-->
+								</header>
+
+							<!-- Content -->
+							
+							    
+								<section>
+								
+								
+								
+									<header class="main">
+										<h2>Present Perfect</h2>
+									</header>
+
+									<!--
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									-->
+									
+
+									
+									<hr class="major" />
+
+							
+
+
+
+
+
+
+
+									
+								
+									
+									
+									<!--
+									<p>Aqui van unas reglas gramáticales para entender como se forman las preguntas en inglés con las palabras WH.</p>
+									<p>Se pueden formar <b>dos tipos</b> de preguntas con las palabras WH: preguntas de tipo <b>subjetivo</b>, si la pregunta se refiere al sujeto de la oración y preguntas de tipo <b> objetivo</b>, si la pregunta se refiere al objeto de la oración. 
+									<p>Un ejemplo de una pregunta subjetiva es <i> Who came here? </i>  (aquí <i>who</i> se refiere al sujeto).
+									<br>Un ejemplo de una pregunta objetiva es <i> Who did you speak with?</i>  (aquí <i>you</i> se refiere al sujeto y <i>who</i> al objeto).  </p>
+									<p>Si la pregunta es <b>objetiva</b> se necesita <b>auxiliar</b> (como <i>did</i>, en el segundo ejemplo ). Compara los dos tipos (tipo Subjetiva a la izquierda y Objetiva a la derecha):</p>
+									<span class="image main"><img src="images/sub-obj.jpg" alt="" /></span>
+									-->
+
+									<p>Completa los espacios en blanco</p>
+									
+									
+									
+								
+									
+									
+
+									
+									
+<script>
+
+//<![CDATA[
+
+<!--
+
+
+
+
+//CODE FOR HANDLING NAV BUTTONS AND FUNCTION BUTTONS
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+
+
+
+//CODE FOR HANDLING DISPLAY OF POPUP FEEDBACK BOX
+
+var topZ = 1000;
+
+function ShowMessage(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+	topZ++;
+	FDiv.style.zIndex = topZ;
+	FDiv.style.top = TopSettingWithScrollOffset(30) + 'px';
+
+	FDiv.style.display = 'block';
+
+	ShowElements(false, 'input');
+	ShowElements(false, 'select');
+	ShowElements(false, 'object');
+	ShowElements(true, 'object', 'FeedbackContent');
+
+//Focus the OK button
+	setTimeout("document.getElementById('FeedbackOKButton').focus()", 50);
+	
+//
+}
+
+function ShowElements(Show, TagName, ContainerToReverse){
+// added third argument to allow objects in the feedback box to appear
+//IE bug -- hide all the form elements that will show through the popup
+//FF on Mac bug : doesn't redisplay objects whose visibility is set to visible
+//unless the object's display property is changed
+
+	//get container object (by Id passed in, or use document otherwise)
+	TopNode = document.getElementById(ContainerToReverse);
+	var Els;
+	if (TopNode != null) {
+		Els = TopNode.getElementsByTagName(TagName);
+	} else {
+		Els = document.getElementsByTagName(TagName);
+	}
+
+	for (var i=0; i<Els.length; i++){
+		if (TagName == "object") {
+			//manipulate object elements in all browsers
+			if (Show == true){
+				Els[i].style.visibility = 'visible';
+			}
+			else{
+				Els[i].style.visibility = 'hidden';
+			}
+		} 
+	}
+}
+
+
+
+function HideFeedback(){
+	document.getElementById('FeedbackDiv').style.display = 'none';
+	ShowElements(true, 'input');
+	ShowElements(true, 'select');
+	ShowElements(true, 'object');
+}
+
+
+//GENERAL UTILITY FUNCTIONS AND VARIABLES
+
+//PAGE DIMENSION FUNCTIONS
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	this.W = document.getElementsByTagName('body')[0].offsetWidth;
+	this.H = document.getElementsByTagName('body')[0].offsetHeight;
+}
+
+var pg = null;
+
+function GetPageXY(El) {
+	var XY = {x: 0, y: 0};
+	while(El){
+		XY.x += El.offsetLeft;
+		XY.y += El.offsetTop;
+		El = El.offsetParent;
+	}
+	return XY;
+}
+
+function GetScrollTop(){
+	if (typeof(window.pageYOffset) == 'number'){
+		return window.pageYOffset;
+	}
+	else{
+		if ((document.body)&&(document.body.scrollTop)){
+			return document.body.scrollTop;
+		}
+		else{
+			if ((document.documentElement)&&(document.documentElement.scrollTop)){
+				return document.documentElement.scrollTop;
+			}
+			else{
+				return 0;
+			}
+		}
+	}
+}
+
+function GetViewportHeight(){
+	if (typeof window.innerHeight != 'undefined'){
+		return window.innerHeight;
+	}
+	else{
+		if (((typeof document.documentElement != 'undefined')&&(typeof document.documentElement.clientHeight !=
+     'undefined'))&&(document.documentElement.clientHeight != 0)){
+			return document.documentElement.clientHeight;
+		}
+		else{
+			return document.getElementsByTagName('body')[0].clientHeight;
+		}
+	}
+}
+
+function TopSettingWithScrollOffset(TopPercent){
+	var T = Math.floor(GetViewportHeight() * (TopPercent/100));
+	return GetScrollTop() + T; 
+}
+
+//CODE FOR AVOIDING LOSS OF DATA WHEN BACKSPACE KEY INVOKES history.back()
+var InTextBox = false;
+
+function SuppressBackspace(e){ 
+	if (InTextBox == true){return;}
+	thisKey = e.keyCode;
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+		e.preventDefault();
+	}
+}
+
+window.addEventListener('keypress',SuppressBackspace,false);
+
+function ReduceItems(InArray, ReduceToSize){
+	var ItemToDump=0;
+	var j=0;
+	while (InArray.length > ReduceToSize){
+		ItemToDump = Math.floor(InArray.length*Math.random());
+		InArray.splice(ItemToDump, 1);
+	}
+}
+
+function Shuffle(InArray){
+	var Num;
+	var Temp = new Array();
+	var Len = InArray.length;
+
+	var j = Len;
+
+	for (var i=0; i<Len; i++){
+		Temp[i] = InArray[i];
+	}
+
+	for (i=0; i<Len; i++){
+		Num = Math.floor(j  *  Math.random());
+		InArray[i] = Temp[Num];
+
+		for (var k=Num; k < (j-1); k++) {
+			Temp[k] = Temp[k+1];
+		}
+		j--;
+	}
+	return InArray;
+}
+
+function WriteToInstructions(Feedback) {
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+}
+
+
+
+
+function EscapeDoubleQuotes(InString){
+	return InString.replace(/"/g, '&quot;')
+}
+
+function TrimString(InString){
+        var x = 0;
+
+        if (InString.length != 0) {
+                while ((InString.charAt(InString.length - 1) == '\u0020') || (InString.charAt(InString.length - 1) == '\u000A') || (InString.charAt(InString.length - 1) == '\u000D')){
+                        InString = InString.substring(0, InString.length - 1)
+                }
+
+                while ((InString.charAt(0) == '\u0020') || (InString.charAt(0) == '\u000A') || (InString.charAt(0) == '\u000D')){
+                        InString = InString.substring(1, InString.length)
+                }
+
+                while (InString.indexOf('  ') != -1) {
+                        x = InString.indexOf('  ')
+                        InString = InString.substring(0, x) + InString.substring(x+1, InString.length)
+                 }
+
+                return InString;
+        }
+
+        else {
+                return '';
+        }
+}
+
+function FindLongest(InArray){
+	if (InArray.length < 1){return -1;}
+
+	var Longest = 0;
+	for (var i=1; i<InArray.length; i++){
+		if (InArray[i].length > InArray[Longest].length){
+			Longest = i;
+		}
+	}
+	return Longest;
+}
+
+//SELECTION OBJECT FOR TYPING WITH KEYPAD
+var selObj = null;
+            
+SelObj = function(box){
+	this.box = box;
+	this.selStart = this.box.selectionStart;
+	this.selEnd = this.box.selectionEnd;
+	this.selText = this.box.value.substring(this.selStart, this.selEnd);
+	return this;
+}
+
+function setSelText(newText){
+	var caretPos = this.selStart + newText.length;
+	var newValue = this.box.value.substring(0, this.selStart);
+	newValue += newText;
+	newValue += this.box.value.substring(this.selEnd, this.box.value.length);
+	this.box.value = newValue;
+	this.box.setSelectionRange(caretPos, caretPos);
+	this.box.focus();
+}
+SelObj.prototype.setSelText = setSelText;
+
+function setSelSelectionRange(start, end){
+	this.box.setSelectionRange(start, end);
+}
+SelObj.prototype.setSelSelectionRange = setSelSelectionRange;
+
+//UNICODE CHARACTER FUNCTIONS
+function IsCombiningDiacritic(CharNum){
+	var Result = (((CharNum >= 0x0300)&&(CharNum <= 0x370))||((CharNum >= 0x20d0)&&(CharNum <= 0x20ff)));
+	Result = Result || (((CharNum >= 0x3099)&&(CharNum <= 0x309a))||((CharNum >= 0xfe20)&&(CharNum <= 0xfe23)));
+	return Result;
+}
+
+function IsCJK(CharNum){
+	return ((CharNum >= 0x3000)&&(CharNum < 0xd800));
+}
+
+//SETUP FUNCTIONS
+//BROWSER WILL REFILL TEXT BOXES FROM CACHE IF NOT PREVENTED
+function ClearTextBoxes(){
+	var NList = document.getElementsByTagName('input');
+	for (var i=0; i<NList.length; i++){
+		if ((NList[i].id.indexOf('Guess') > -1)||(NList[i].id.indexOf('Gap') > -1)){
+			NList[i].value = '';
+		}
+		if (NList[i].id.indexOf('Chk') > -1){
+			NList[i].checked = '';
+		}
+	}
+}
+
+
+
+
+
+
+
+//JCLOZE CORE JAVASCRIPT CODE
+
+function ItemState(){
+	this.ClueGiven = false;
+	this.HintsAndChecks = 0;
+	this.MatchedAnswerLength = 0;
+	this.ItemScore = 0;
+	this.AnsweredCorrectly = false;
+	this.Guesses = new Array();
+	return this;
+}
+
+var Feedback = '';
+var Correct = 'Correct! Well done.';
+var Incorrect = 'Some of your answers are incorrect. Incorrect answers have been left in place for you to change.'; 
+var GiveHint = 'The next correct letter has been added to the answer.';
+var CaseSensitive = false;
+var YourScoreIs = 'Your score is ';
+var Finished = false;
+var Locked = false;
+var Score = 0;
+var CurrentWord = 0;
+var Guesses = '';
+var TimeOver = false;
+
+I = new Array();
+
+I[0] = new Array();
+I[0][1] = new Array();
+I[0][1][0] = new Array();
+I[0][1][0][0] = '\u0068\u0061\u0073';
+I[0][2]='\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[1] = new Array();
+I[1][1] = new Array();
+I[1][1][0] = new Array();
+I[1][1][0][0] = '\u0073\u0065\u006E\u0074';
+I[1][2]='';
+
+I[2] = new Array();
+I[2][1] = new Array();
+I[2][1][0] = new Array();
+I[2][1][0][0] = '\u0068\u0061\u0076\u0065';
+I[2][2]='\u004E\u004F\u0020\u0065\u0073\u0020\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[3] = new Array();
+I[3][1] = new Array();
+I[3][1][0] = new Array();
+I[3][1][0][0] = '\u0076\u0069\u0073\u0069\u0074\u0065\u0064';
+I[3][2]='';
+
+I[4] = new Array();
+I[4][1] = new Array();
+I[4][1][0] = new Array();
+I[4][1][0][0] = '\u0068\u0061\u0076\u0065';
+I[4][2]='\u004E\u004F\u0020\u0065\u0073\u0020\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[5] = new Array();
+I[5][1] = new Array();
+I[5][1][0] = new Array();
+I[5][1][0][0] = '\u0062\u0065\u0065\u006E';
+I[5][2]='';
+
+I[6] = new Array();
+I[6][1] = new Array();
+I[6][1][0] = new Array();
+I[6][1][0][0] = '\u0068\u0061\u0076\u0065';
+I[6][2]='\u004E\u004F\u0020\u0065\u0073\u0020\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[7] = new Array();
+I[7][1] = new Array();
+I[7][1][0] = new Array();
+I[7][1][0][0] = '\u0070\u0061\u0063\u006B\u0065\u0064';
+I[7][2]='';
+
+I[8] = new Array();
+I[8][1] = new Array();
+I[8][1][0] = new Array();
+I[8][1][0][0] = '\u0068\u0061\u0073';
+I[8][2]='\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[9] = new Array();
+I[9][1] = new Array();
+I[9][1][0] = new Array();
+I[9][1][0][0] = '\u0068\u0061\u0064';
+I[9][2]='';
+
+I[10] = new Array();
+I[10][1] = new Array();
+I[10][1][0] = new Array();
+I[10][1][0][0] = '\u0068\u0061\u0076\u0065';
+I[10][2]='\u004E\u004F\u0020\u0065\u0073\u0020\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[11] = new Array();
+I[11][1] = new Array();
+I[11][1][0] = new Array();
+I[11][1][0][0] = '\u0064\u006F\u006E\u0065';
+I[11][2]='';
+
+I[12] = new Array();
+I[12][1] = new Array();
+I[12][1][0] = new Array();
+I[12][1][0][0] = '\u0068\u0061\u0076\u0065';
+I[12][2]='\u004E\u004F\u0020\u0065\u0073\u0020\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[13] = new Array();
+I[13][1] = new Array();
+I[13][1][0] = new Array();
+I[13][1][0][0] = '\u0063\u006C\u0065\u0061\u006E\u0065\u0064';
+I[13][2]='';
+
+I[14] = new Array();
+I[14][1] = new Array();
+I[14][1][0] = new Array();
+I[14][1][0][0] = '\u0068\u0061\u0073';
+I[14][2]='\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[15] = new Array();
+I[15][1] = new Array();
+I[15][1][0] = new Array();
+I[15][1][0][0] = '\u0070\u0061\u0069\u006E\u0074\u0065\u0064';
+I[15][2]='';
+
+I[16] = new Array();
+I[16][1] = new Array();
+I[16][1][0] = new Array();
+I[16][1][0][0] = '\u0068\u0061\u0076\u0065';
+I[16][2]='\u004E\u004F\u0020\u0065\u0073\u0020\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[17] = new Array();
+I[17][1] = new Array();
+I[17][1][0] = new Array();
+I[17][1][0][0] = '\u0067\u006F\u006E\u0065';
+I[17][2]='';
+
+I[18] = new Array();
+I[18][1] = new Array();
+I[18][1][0] = new Array();
+I[18][1][0][0] = '\u0068\u0061\u0076\u0065';
+I[18][2]='\u004E\u004F\u0020\u0065\u0073\u0020\u0074\u0065\u0072\u0063\u0065\u0072\u0061\u0020\u0070\u0065\u0072\u0073\u006F\u006E\u0061';
+
+I[19] = new Array();
+I[19][1] = new Array();
+I[19][1][0] = new Array();
+I[19][1][0][0] = '\u0067\u0069\u0076\u0065\u006E\u0020\u0075\u0070';
+I[19][2]='';
+
+
+State = new Array();
+
+function StartUp(){
+//Show a keypad if there is one	(added bugfix for 6.0.4.12)
+	if (document.getElementById('CharacterKeypad') != null){
+		document.getElementById('CharacterKeypad').style.display = 'block';
+	}
+	
+
+
+
+
+
+
+	var i = 0;
+
+	State.length = 0;
+	for (i=0; i<I.length; i++){
+		State[i] = new ItemState();
+	}
+	
+	ClearTextBoxes();
+	
+
+
+}
+
+function ShowClue(ItemNum){
+	if (Locked == true){return;}
+	State[ItemNum].ClueGiven = true;
+	ShowMessage(I[ItemNum][2]);
+}
+
+function SaveCurrentAnswers(){
+	var Ans = '';
+	for (var i=0; i<I.length; i++){
+		Ans = GetGapValue(i);
+		if ((Ans.length > 0)&&(Ans != State[i].Guesses[State[i].Guesses.length-1])){
+			State[i].Guesses[State[i].Guesses.length] = Ans;
+		}
+	}
+}
+
+function CompileGuesses(){
+	var F = document.getElementById('store');
+	if (F != null){
+		var Temp = '<?xml version="1.0"?><hpnetresult><fields>';
+		var GapLabel = '';
+		for (var i=0; i<State.length; i++){
+			GapLabel = 'Gap ' + (i+1).toString();
+			Temp += '<field><fieldname>' + GapLabel + '</fieldname>';
+			Temp += '<fieldtype>student-responses</fieldtype><fieldlabel>' + GapLabel + '</fieldlabel>';
+			Temp += '<fieldlabelid>JClozeStudentResponses</fieldlabelid><fielddata>';
+			for (var j=0; j<State[i].Guesses.length; j++){
+				if (j>0){Temp += '| ';}
+				Temp += State[i].Guesses[j] + ' ';	
+			}	
+  		Temp += '</fielddata></field>';
+		}
+		Temp += '</fields></hpnetresult>';
+		Detail = Temp;
+	}
+}
+
+function CheckAnswers(){
+	if (Locked == true){return;}
+	SaveCurrentAnswers();
+	var AllCorrect = true;
+
+//Check each answer
+	for (var i = 0; i<I.length; i++){
+
+		if (State[i].AnsweredCorrectly == false){
+//If it's right, calculate its score
+			if (CheckAnswer(i, true) > -1){
+				var TotalChars = GetGapValue(i).length;
+				State[i].ItemScore = (TotalChars-State[i].HintsAndChecks)/TotalChars;
+				if (State[i].ClueGiven == true){State[i].ItemScore /= 2;}
+				if (State[i].ItemScore <0 ){State[i].ItemScore = 0;}
+				State[i].AnsweredCorrectly = true;
+//Drop the correct answer into the page, replacing the text box
+				SetCorrectAnswer(i, GetGapValue(i));
+			}
+			else{
+//Otherwise, increment the hints for this item, as a penalty
+				State[i].HintsAndChecks++;
+
+//then set the flag
+				AllCorrect = false;
+			}
+		}
+	}
+
+//Calculate the total score
+	var TotalScore = 0;
+	for (i=0; i<State.length; i++){
+		TotalScore += State[i].ItemScore;
+	}
+	TotalScore = Math.floor((TotalScore * 100)/I.length);
+
+//Compile the output
+	Output = '';
+
+	if (AllCorrect == true){
+		Output = Correct + '<br />';
+	}
+
+	Output += YourScoreIs + ' ' + TotalScore + '%.<br />';
+	if (AllCorrect == false){
+		Output += Incorrect;
+	}
+	ShowMessage(Output);
+	setTimeout('WriteToInstructions(Output)', 50);
+	
+	Score = TotalScore;
+	CompileGuesses();
+	
+	if ((AllCorrect == true)||(Finished == true)){
+	
+
+
+		TimeOver = true;
+		Locked = true;
+		Finished = true;
+	}
+
+}
+
+function TrackFocus(BoxNumber){
+	CurrentWord = BoxNumber;
+	InTextBox = true;
+}
+
+function LeaveGap(){
+	InTextBox = false;
+}
+
+function CheckBeginning(Guess, Answer){
+	var OutString = '';
+	var i = 0;
+	var UpperGuess = '';
+	var UpperAnswer = '';
+
+	if (CaseSensitive == false) {
+		UpperGuess = Guess.toUpperCase();
+		UpperAnswer = Answer.toUpperCase();
+	}
+	else {
+		UpperGuess = Guess;
+		UpperAnswer = Answer;
+	}
+
+	while (UpperGuess.charAt(i) == UpperAnswer.charAt(i)) {
+		OutString += Guess.charAt(i);
+		i++;
+	}
+	OutString += Answer.charAt(i);
+	return OutString;
+}
+
+function GetGapValue(GNum){
+	var RetVal = '';
+	if ((GNum<0)||(GNum>=I.length)){return RetVal;}
+	if (document.getElementById('Gap' + GNum) != null){
+		RetVal = document.getElementById('Gap' + GNum).value;
+		RetVal = TrimString(RetVal);
+	}
+	else{
+		RetVal = State[GNum].Guesses[State[GNum].Guesses.length-1];
+	}
+	return RetVal;
+}
+
+function SetGapValue(GNum, Val){
+	if ((GNum<0)||(GNum>=I.length)){return;}
+	if (document.getElementById('Gap' + GNum) != null){
+		document.getElementById('Gap' + GNum).value = Val;
+		document.getElementById('Gap' + GNum).focus();
+	}
+}
+
+function SetCorrectAnswer(GNum, Val){
+	if ((GNum<0)||(GNum>=I.length)){return;}
+	if (document.getElementById('GapSpan' + GNum) != null){
+		document.getElementById('GapSpan' + GNum).innerHTML = Val;
+	}
+}
+
+function FindCurrent() {
+	var x = 0;
+	FoundCurrent = -1;
+
+//Test the current word:
+//If its state is not set to already correct, check the word.
+	if (State[CurrentWord].AnsweredCorrectly == false){
+		if (CheckAnswer(CurrentWord, false) < 0){
+			return CurrentWord;
+		}
+	}
+	
+	x=CurrentWord + 1;
+	while (x<I.length){
+		if (State[x].AnsweredCorrectly == false){
+			if (CheckAnswer(x, false) < 0){
+				return x;
+			}
+		}
+	x++;	
+	}
+
+	x = 0;
+	while (x<CurrentWord){
+		if (State[x].AnsweredCorrectly == false){
+			if (CheckAnswer(x, false) < 0){
+				return x;
+			}
+		}
+	x++;	
+	}
+	return FoundCurrent;
+}
+
+function CheckAnswer(GapNum, MarkAnswer){
+	var Guess = GetGapValue(GapNum);
+	var UpperGuess = '';
+	var UpperAnswer = '';
+	if (CaseSensitive == false){
+		UpperGuess = Guess.toUpperCase();
+	}
+	else{
+		UpperGuess = Guess;
+	}
+	var Match = -1;
+	for (var i = 0; i<I[GapNum][1].length; i++){
+		if (CaseSensitive == false){
+			UpperAnswer = I[GapNum][1][i][0].toUpperCase();
+		}
+		else{
+			UpperAnswer = I[GapNum][1][i][0];
+		}
+		if (TrimString(UpperGuess) == UpperAnswer){
+			Match = i;
+			if (MarkAnswer == true){
+				State[GapNum].AnsweredCorrectly = true;
+			}
+		}
+	}
+	return Match;
+}
+
+function GetHint(GapNum){
+	Guess = GetGapValue(GapNum);
+
+	if (CheckAnswer(GapNum, false) > -1){return ''}
+	RightBits = new Array();
+	for (var i=0; i<I[GapNum][1].length; i++){
+		RightBits[i] = CheckBeginning(Guess, I[GapNum][1][i][0]);
+	}
+	var RightOne = FindLongest(RightBits);
+	var Result = I[GapNum][1][RightOne][0].substring(0,RightBits[RightOne].length);
+//Add another char if the last one is a space
+	if (Result.charAt(Result.length-1) == ' '){
+		Result = I[GapNum][1][RightOne][0].substring(0,RightBits[RightOne].length+1);
+	}
+	return Result;
+}
+
+function ShowHint(){
+	if (document.getElementById('FeedbackDiv').style.display == 'block'){return;}
+	if (Locked == true){return;}
+	var CurrGap = FindCurrent();
+	if (CurrGap < 0){return;}
+
+	var HintString = GetHint(CurrGap);
+
+	if (HintString.length > 0){
+		SetGapValue(CurrGap, HintString);
+		State[CurrGap].HintsAndChecks += 1;
+	}
+	ShowMessage(GiveHint);
+}
+
+function TypeChars(Chars){
+	var CurrGap = FindCurrent();
+	if (CurrGap < 0){return;}
+	var box = document.getElementById('Gap' + CurrGap);
+
+	if (box != null){
+		var selObj = SelObj(box);
+		selObj.setSelText(Chars);
+	}
+}
+
+
+
+
+
+
+
+
+//-->
+
+//]]>
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody" >
+
+<!-- BeginTopNavButtons -->
+
+
+
+<!-- EndTopNavButtons -->
+
+<div class="Titles">
+	<h2 class="ExerciseTitle"></h2>
+
+
+
+</div>
+
+<div id="InstructionsDiv" class="StdDiv">
+	<div id="Instructions"></div>
+</div>
+
+
+<div id="ContainerDiv">
+
+
+
+<div class="ExerciseContainer">
+
+
+
+
+
+
+<!-- These top buttons hidden; reveal if required -->
+<!--
+<button id="CheckButton1" class="FuncButton" onclick="CheckAnswers()">&#160;Check&#160;</button>
+
+
+
+ -->
+ 
+<div id="ClozeDiv">
+<form id="Cloze" method="post" autocomplete="off" onsubmit="return false;">
+<div class="ClozeBody">
+Complete the following sentences with the correct present perfect forms.<br /><br /><br />Karen <span class="GapSpan" id="GapSpan0"><input type="text" autocomplete="off" id="Gap0" onfocus="TrackFocus(0)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan1"><input type="text" autocomplete="off" id="Gap1" onfocus="TrackFocus(1)" onblur="LeaveGap()" class="GapBox" size="6"/></span> me an e-mail. (to send)<br /><br />Dave and Pat <span class="GapSpan" id="GapSpan2"><input type="text" autocomplete="off" id="Gap2" onfocus="TrackFocus(2)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan3"><input type="text" autocomplete="off" id="Gap3" onfocus="TrackFocus(3)" onblur="LeaveGap()" class="GapBox" size="7"/></span> the museum. (to visit)<br /><br />I <span class="GapSpan" id="GapSpan4"><input type="text" autocomplete="off" id="Gap4" onfocus="TrackFocus(4)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan5"><input type="text" autocomplete="off" id="Gap5" onfocus="TrackFocus(5)" onblur="LeaveGap()" class="GapBox" size="6"/></span> at the pet shop. (to be)<br /><br />They <span class="GapSpan" id="GapSpan6"><input type="text" autocomplete="off" id="Gap6" onfocus="TrackFocus(6)" onblur="LeaveGap()" class="GapBox" size="6"/></span> already <span class="GapSpan" id="GapSpan7"><input type="text" autocomplete="off" id="Gap7" onfocus="TrackFocus(7)" onblur="LeaveGap()" class="GapBox" size="6"/></span> their rucksacks. (to pack)<br /><br />Marcus <span class="GapSpan" id="GapSpan8"><input type="text" autocomplete="off" id="Gap8" onfocus="TrackFocus(8)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan9"><input type="text" autocomplete="off" id="Gap9" onfocus="TrackFocus(9)" onblur="LeaveGap()" class="GapBox" size="6"/></span> an accident. (to have)<br /><br />We <span class="GapSpan" id="GapSpan10"><input type="text" autocomplete="off" id="Gap10" onfocus="TrackFocus(10)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan11"><input type="text" autocomplete="off" id="Gap11" onfocus="TrackFocus(11)" onblur="LeaveGap()" class="GapBox" size="6"/></span> the shopping for our grandmother. (to do)<br /><br />I <span class="GapSpan" id="GapSpan12"><input type="text" autocomplete="off" id="Gap12" onfocus="TrackFocus(12)" onblur="LeaveGap()" class="GapBox" size="6"/></span> just <span class="GapSpan" id="GapSpan13"><input type="text" autocomplete="off" id="Gap13" onfocus="TrackFocus(13)" onblur="LeaveGap()" class="GapBox" size="7"/></span> my bike. (to clean)<br /><br />Emily <span class="GapSpan" id="GapSpan14"><input type="text" autocomplete="off" id="Gap14" onfocus="TrackFocus(14)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan15"><input type="text" autocomplete="off" id="Gap15" onfocus="TrackFocus(15)" onblur="LeaveGap()" class="GapBox" size="7"/></span> her room. (to paint)<br /><br />Lisa and Colin <span class="GapSpan" id="GapSpan16"><input type="text" autocomplete="off" id="Gap16" onfocus="TrackFocus(16)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan17"><input type="text" autocomplete="off" id="Gap17" onfocus="TrackFocus(17)" onblur="LeaveGap()" class="GapBox" size="6"/></span> to a concert. (to go)<br /><br />My friends <span class="GapSpan" id="GapSpan18"><input type="text" autocomplete="off" id="Gap18" onfocus="TrackFocus(18)" onblur="LeaveGap()" class="GapBox" size="6"/></span> <span class="GapSpan" id="GapSpan19"><input type="text" autocomplete="off" id="Gap19" onfocus="TrackFocus(19)" onblur="LeaveGap()" class="GapBox" size="8"/></span> smoking. (to give up)<br />
+</div>
+</form>
+</div>
+
+
+
+<button id="CheckButton2" class="FuncButton" onclick="CheckAnswers()">&#160;Check&#160;</button>
+
+
+
+</div>
+
+</div>
+
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+<button id="FeedbackOKButton" class="FuncButton" onclick="HideFeedback(); return false;">&#160;OK&#160;</button>
+</div>
+
+<!-- BeginBottomNavButtons -->
+
+
+
+<!-- EndBottomNavButtons -->
+
+<!-- BeginSubmissionForm -->
+
+<!-- EndSubmissionForm -->
+
+</body>						
+									
+									
+									
+									
+
+
+
+
+
+
+
+									
+									
+                                    <!-- 
+									<hr class="major" />
+
+									<h2>Magna etiam veroeros</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+
+									<hr class="major" />
+
+									<h2>Lorem aliquam bibendum</h2>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+                                    -->
+									
+									
+								</section>
+								
+							 
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="home.html">Homepage</a></li>
+										<li><a href="relative_clauses.html">Relative Clauses</a></li>
+										<li><a href="modales.html">Modals</a></li>
+										<li><a href="present_perfect.html">Present Perfect</a></li>
+										<li><a href="relative_clauses_1.html">Extra: Relative Clauses 1</a></li>
+										<li><a href="relative_clauses_2.html">Extra: Relative Clauses 2</a></li>
+										<li><a href="relative_clauses_3.html">Extra: Relative Clauses 3</a></li>
+										<li><a href="modals_1.html">Extra: Modals 1</a></li>
+										<li><a href="modals_2.html">Extra: Modals 2</a></li>
+										<li><a href="modals_3.html">Extra: Modals 3</a></li>
+										
+	
+										<!--
+										<li><a href="generic.html">Generic</a></li>
+										<li><a href="elements.html">Elements</a></li>
+										-->
+										    <!--
+											<span class="opener">Wh-question words</span>
+											<ul>
+												<li><a href="grammar_wh.html">Exercise 1</a></li>
+												<li><a href="grammar_wh_02.html">Exercise 2</a></li>
+												<li><a href="grammar_wh_03.html">Exercise 3</a></li>
+												<li><a href="grammar_wh_04.html">Exercise 4</a></li>
+												<!--
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+												
+											</ul>
+											-->
+										<!--	
+										</li>
+										<li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+										<li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										-->
+										<!--
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li>
+										-->
+									</ul>
+								</nav>
+								
+								
+							
+      
+							<!-- Section -->
+							
+							    <!-- 
+								<section>
+									<header class="major">
+										<h2>Ante interdum</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+							     --> 
+
+							<!-- Section -->
+								<!--
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+								--> 
+
+                            
+
+							<!-- Footer -->
+								<!--
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+								--> 
+
+						</div>
+					</div>
+
+			</div>
+			
+
+			
+				<!--Bottom sticky Audio
+				<div id="otto">
+				
+
+								    
+		
+									<audio id="cs_audio" controls>
+									  <source src="audio/gerund_infinitive_story1.mp3" type="audio/mpeg">
+									</audio>
+
+
+									<div style="text-align: center;">
+
+									<div id="cs_audioplayer">
+
+										 <span style="position: relative;left: 0;float: left;font-size: 0.87em;"><span id="cs_audio_current_time">0:0</span></span>
+
+										 <span id="cs_play_pause_btn" style="position: relative;">
+											 <i class="far fa-play-circle" id="cs_audio_play"></i>
+											 <i class="far fa-pause-circle" id="cs_audio_pause"></i>
+										 </span>
+
+										 <span id="cs_audio_sound" style="position: relative;right: 5px;float: right;margin-left: 15px;top: -2px;">
+											 <i style="vertical-align: middle;font-size: 1.14em;" class="fas fa-volume-down"></i>
+											 <div class="cs_volBar" style="height: 6px; width: 65px;background-color: #ccc;display: inline-block;cursor: pointer;">
+											   <div class="cs_volume" style="height: 6px;width: 28px;background-color: red;position: absolute;"></div>
+											 </div>
+
+										 </span>
+										 <span id="cs_audio_duration" style="position: relative;right: 0;float: right;padding-left: 10px;font-size: 0.87em;"></span>
+
+										 <div class="cs_audio_bar">
+											 <div class="cs_audio_bar_now"></div>
+											 <div class="cs_audio_bar_loaded"></div>
+										 </div>
+
+									</div>
+									</div>
+                                    			
+
+			</div>
+			Fin bottom audio -->
+	        
+			
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/cspd-player.js"></script>
+			
+
+</html>
